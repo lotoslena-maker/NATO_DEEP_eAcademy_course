@@ -182,6 +182,15 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
   </div>
 </div>
 
+<h3>Ще один приклад: дані з повітряної платформи</h3>
+<div class="photo-explain">
+  <img src="assets/images/section2/drone-over-desert.jpg" alt="Безпілотна платформа під час збору візуальних даних">
+  <div>
+    <p>Камера повітряної платформи формує великий масив числових даних. На ранніх етапах мережі окремі нейрони працюють лише з невеликими фрагментами цих значень.</p>
+    <p>Тобто навіть складне зображення для нейрона починається з простих числових входів.</p>
+  </div>
+</div>
+
 <div class="example"><strong>Важливо:</strong> ваги та bias не задаються вручну для кожного нейрона. Під час навчання модель поступово змінює їх, щоб зменшувати помилку.</div>
 
 <div class="check">
@@ -383,6 +392,15 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
   <div>
     <p>In speech-recognition tasks, inputs can represent numerical characteristics of short audio segments. Different neurons learn to respond to different combinations of these features.</p>
     <p>A single neuron does not “recognise a sentence”. It produces one small intermediate signal that can be used by later neurons.</p>
+  </div>
+</div>
+
+<h3>Another example: data from an aerial platform</h3>
+<div class="photo-explain">
+  <img src="assets/images/section2/drone-over-desert.jpg" alt="Uncrewed aerial platform collecting visual data">
+  <div>
+    <p>An aerial camera produces a large amount of numerical image data. In the early stages of a network, individual neurons work only with small parts of those values.</p>
+    <p>Even a complex image therefore begins as simple numerical inputs to a neuron.</p>
   </div>
 </div>
 
