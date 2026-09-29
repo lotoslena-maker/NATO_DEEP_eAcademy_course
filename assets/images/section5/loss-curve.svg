@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360">
+<rect width="1200" height="360" rx="28" fill="#0a2036"/>
+<g font-family="Arial, sans-serif">
+  <text x="60" y="55" fill="#eef5fb" font-size="30" font-weight="700">Loss during training</text>
+  <text x="60" y="88" fill="#afc2d6" font-size="18">A typical goal is to reduce the loss as the optimizer updates the model.</text>
+</g>
+<g transform="translate(120 125)">
+  <line x1="0" y1="150" x2="930" y2="150" stroke="#6b8298" stroke-width="2"/>
+  <line x1="0" y1="0" x2="0" y2="150" stroke="#6b8298" stroke-width="2"/>
+  <path d="M0 20 C100 55 160 75 240 95 C330 118 420 126 510 134 C620 142 760 145 930 147" fill="none" stroke="#86e3b2" stroke-width="7"/>
+  <g fill="#86e3b2"><circle cx="0" cy="20" r="7"/><circle cx="240" cy="95" r="7"/><circle cx="510" cy="134" r="7"/><circle cx="930" cy="147" r="7"/></g>
+  <text x="-35" y="78" fill="#afc2d6" font-family="Arial" font-size="18" transform="rotate(-90 -35 78)">Loss</text>
+  <text x="465" y="195" fill="#afc2d6" font-family="Arial" font-size="18">Training steps / epochs</text>
+</g>
+</svg>
