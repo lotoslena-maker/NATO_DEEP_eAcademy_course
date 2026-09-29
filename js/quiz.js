@@ -1,0 +1,1 @@
+// Quiz engine placeholder. Knowledge checks and final assessment will be added here.
