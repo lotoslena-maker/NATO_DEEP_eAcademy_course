@@ -1,0 +1,5 @@
+const translations={
+uk:{eyebrow:"ІНТЕРАКТИВНИЙ НАВЧАЛЬНИЙ МОДУЛЬ",title:"Основи глибокого навчання",subtitle:"Від штучного нейрона до навчання нейронної мережі",start:"Розпочати курс",courseMap:"Структура курсу",previous:"Назад",next:"Далі",footer:"Прототип для NATO DEEP eAcademy"},
+en:{eyebrow:"INTERACTIVE LEARNING MODULE",title:"Fundamentals of Deep Learning",subtitle:"From an artificial neuron to neural network training",start:"Start course",courseMap:"Course structure",previous:"Previous",next:"Next",footer:"Prototype for NATO DEEP eAcademy"}
+};
+function applyLanguage(lang){document.documentElement.lang=lang;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(translations[lang][k])el.textContent=translations[lang][k]});document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("courseLang",lang);window.courseLang=lang;window.renderModules?.();}
