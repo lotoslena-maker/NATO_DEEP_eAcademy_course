@@ -298,7 +298,47 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 {title:"Інтерактивний сценарій",lead:"Оберіть підхід для задачі",body:`<div class="scenario"><p><strong>Ситуація:</strong> потрібно автоматично розподілити велику колекцію зображень за відомими категоріями. Даних достатньо, а ознаки складно описати вручну.</p><p>Який підхід найбільш доречний у межах цього навчального прикладу?</p><button class="answer" data-correct="0">Створити вручну правило для кожного можливого зображення</button><button class="answer" data-correct="1">Навчити модель розпізнавати закономірності на прикладах</button><button class="answer" data-correct="0">Не використовувати дані для навчання</button><p class="feedback"></p></div>`},
 {title:"Knowledge Check",lead:"Перевірте ключові поняття",body:`<div class="check"><h3>Що є підмножиною Machine Learning?</h3><button class="answer" data-correct="1">Deep Learning</button><button class="answer" data-correct="0">Усі бази даних</button><button class="answer" data-correct="0">Будь-яка комп’ютерна програма</button><p class="feedback"></p></div><div class="takeaway">Після відповіді переходьте до підсумкового оцінювання.</div>`},
 {title:"Final Assessment",lead:"Підсумкова перевірка",body:`<div id="assessment"></div>`},
-{title:"Summary",lead:"Ключові висновки",body:`<div class="summary"><h3>Ви пройшли модуль</h3><p>Тепер ви можете пояснити місце Deep Learning у структурі AI, базову роботу штучного нейрона, роль шарів мережі та загальний цикл навчання.</p><div class="flow"><span>AI</span><b>→</b><span>ML</span><b>→</b><span>DL</span><b>→</b><span>Neural Networks</span></div><p><strong>Головна думка:</strong> Deep Learning дає моделі змогу навчатися складним представленням із даних, але потребує належних даних, оцінювання та контролю.</p></div>`}
+{title:"Summary",lead:"Підсумуємо головні ідеї курсу й зберемо їх у цілісну картину",body:`
+<div class="summary summary-enhanced">
+  <div class="summary-complete">
+    <span class="summary-check">✓</span>
+    <div><h3>Ви завершили навчальний модуль</h3><p>Тепер окремі поняття — AI, ML, Deep Learning, нейрон, шари та навчання — можна побачити як одну послідовну систему.</p></div>
+  </div>
+
+  <figure class="course-figure">
+    <img src="assets/images/section10/course-map.svg" alt="Карта понять курсу від AI і ML до Deep Learning, нейрона, навчання та застосувань">
+    <figcaption>Карта курсу: від загальної сфери AI до механізмів Deep Learning і практичних застосувань.</figcaption>
+  </figure>
+
+  <h3>5 ключових висновків</h3>
+  <div class="summary-grid">
+    <article><span>1</span><b>Deep Learning є частиною Machine Learning</b><p>AI — ширша сфера, ML навчається на даних, а DL використовує багатошарові нейронні мережі.</p></article>
+    <article><span>2</span><b>Нейрон працює з числами</b><p>Inputs, weights, bias та activation разом формують вихід нейрона.</p></article>
+    <article><span>3</span><b>Шари будують представлення</b><p>Ранні шари реагують на прості ознаки, глибші — комбінують їх у складніші.</p></article>
+    <article><span>4</span><b>Навчання — це цикл</b><p>Forward pass → loss → backpropagation → update. Цикл повторюється багато разів.</p></article>
+    <article><span>5</span><b>Якість залежить не лише від моделі</b><p>Дані, метрики, обчислювальні ресурси та людський контроль так само важливі.</p></article>
+  </div>
+
+  <h3>Тепер ви можете</h3>
+  <div class="summary-can">
+    <div>✓ пояснити різницю між AI, ML і DL;</div>
+    <div>✓ описати роботу штучного нейрона;</div>
+    <div>✓ пояснити роль input, hidden та output layers;</div>
+    <div>✓ описати базовий цикл навчання мережі;</div>
+    <div>✓ навести приклади застосування Deep Learning.</div>
+  </div>
+
+  <div class="summary-reflection">
+    <strong>Запитання для самоперевірки</strong>
+    <p>Чи можете ви своїми словами пояснити, як дані проходять шлях від входу в мережу до прогнозу та як модель змінює себе під час навчання?</p>
+  </div>
+
+  <div class="takeaway"><strong>Головна думка курсу:</strong> Deep Learning — це не «магія», а послідовність математичних перетворень, які навчаються на даних. Корисність системи визначається не лише архітектурою, а й якістю даних, оцінюванням і відповідальним людським контролем.</div>
+
+  <div class="summary-actions">
+    <button class="primary summary-review" data-review-course>Переглянути курс ще раз</button>
+  </div>
+</div>`}
 ]},
 en:{start:"Start course",prev:"Back",next:"Next",sections:[
 {title:"Introduction",lead:"What Deep Learning is, how it works at a basic level, and why it has become one of the key areas of modern AI",body:`
@@ -597,7 +637,47 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 {title:"Interactive Scenario",lead:"Choose an approach for the task",body:`<div class="scenario"><p><strong>Situation:</strong> a large image collection must be automatically assigned to known categories. There is sufficient training data and useful features are difficult to specify manually.</p><p>Which approach is most appropriate for this learning example?</p><button class="answer" data-correct="0">Write a manual rule for every possible image</button><button class="answer" data-correct="1">Train a model to learn patterns from examples</button><button class="answer" data-correct="0">Do not use data for learning</button><p class="feedback"></p></div>`},
 {title:"Knowledge Check",lead:"Check the key concepts",body:`<div class="check"><h3>Which is a subset of Machine Learning?</h3><button class="answer" data-correct="1">Deep Learning</button><button class="answer" data-correct="0">All databases</button><button class="answer" data-correct="0">Any computer program</button><p class="feedback"></p></div><div class="takeaway">After answering, continue to the final assessment.</div>`},
 {title:"Final Assessment",lead:"Final knowledge check",body:`<div id="assessment"></div>`},
-{title:"Summary",lead:"Key takeaways",body:`<div class="summary"><h3>You completed the module</h3><p>You can now explain where Deep Learning fits within AI, the basic operation of an artificial neuron, the role of network layers, and the overall training cycle.</p><div class="flow"><span>AI</span><b>→</b><span>ML</span><b>→</b><span>DL</span><b>→</b><span>Neural Networks</span></div><p><strong>Main idea:</strong> Deep Learning enables models to learn complex representations from data, while still requiring appropriate data, evaluation and oversight.</p></div>`}
+{title:"Summary",lead:"Bring the main ideas together into one coherent picture",body:`
+<div class="summary summary-enhanced">
+  <div class="summary-complete">
+    <span class="summary-check">✓</span>
+    <div><h3>You completed the learning module</h3><p>You can now connect AI, ML, Deep Learning, neurons, layers, and training as parts of one coherent system.</p></div>
+  </div>
+
+  <figure class="course-figure">
+    <img src="assets/images/section10/course-map.svg" alt="Course concept map from AI and ML to Deep Learning, neurons, training, and applications">
+    <figcaption>Course map: from the broader AI landscape to Deep Learning mechanisms and practical applications.</figcaption>
+  </figure>
+
+  <h3>5 key takeaways</h3>
+  <div class="summary-grid">
+    <article><span>1</span><b>Deep Learning is part of Machine Learning</b><p>AI is the broad field, ML learns from data, and DL uses multi-layer neural networks.</p></article>
+    <article><span>2</span><b>A neuron works with numbers</b><p>Inputs, weights, bias, and activation combine to produce an output.</p></article>
+    <article><span>3</span><b>Layers build representations</b><p>Early layers respond to simple features; deeper layers combine them into richer ones.</p></article>
+    <article><span>4</span><b>Training is a cycle</b><p>Forward pass → loss → backpropagation → update, repeated many times.</p></article>
+    <article><span>5</span><b>Quality depends on more than the model</b><p>Data, metrics, compute, and human oversight are equally important.</p></article>
+  </div>
+
+  <h3>You can now</h3>
+  <div class="summary-can">
+    <div>✓ explain the difference between AI, ML, and DL;</div>
+    <div>✓ describe how an artificial neuron works;</div>
+    <div>✓ explain input, hidden, and output layers;</div>
+    <div>✓ describe the basic neural-network training loop;</div>
+    <div>✓ give examples of Deep Learning applications.</div>
+  </div>
+
+  <div class="summary-reflection">
+    <strong>Self-check question</strong>
+    <p>Can you explain in your own words how data moves from network input to a prediction, and how the model changes itself during training?</p>
+  </div>
+
+  <div class="takeaway"><strong>Main course message:</strong> Deep Learning is not “magic”; it is a sequence of mathematical transformations learned from data. A useful system depends not only on architecture, but also on data quality, evaluation, and responsible human oversight.</div>
+
+  <div class="summary-actions">
+    <button class="primary summary-review" data-review-course>Review the course</button>
+  </div>
+</div>`}
 ]}}
 ;
 const questions={uk:[["Deep Learning є…",["підмножиною Machine Learning","типом бази даних","операційною системою"],0],["Що змінюється під час навчання?",["Лише назва моделі","Ваги та інші параметри","Кількість вхідних даних автоматично"],1],["Для чого потрібна функція втрат?",["Вимірювати помилку прогнозу","Зберігати файли","Створювати нові класи"],0],["Що роблять hidden layers?",["Формують представлення ознак","Лише показують результат","Замінюють дані"],0],["Яка послідовність описує навчання?",["Прогноз → помилка → оновлення","Оновлення → видалення → прогноз","Зберігання → друк → прогноз"],0]],en:[["Deep Learning is…",["a subset of Machine Learning","a database type","an operating system"],0],["What changes during training?",["Only the model name","Weights and other parameters","The number of inputs automatically"],1],["What is a loss function used for?",["Measuring prediction error","Storing files","Creating new classes"],0],["What do hidden layers do?",["Build feature representations","Only display results","Replace the data"],0],["Which sequence describes training?",["Prediction → error → update","Update → delete → prediction","Storage → print → prediction"],0]]};
@@ -608,7 +688,8 @@ function bindAnswers(){document.querySelectorAll(".answer").forEach(btn=>btn.onc
 function bindNeuronParts(){const box=document.getElementById("neuronExplain");if(!box)return;const copy={uk:{inputs:"Inputs — числові значення, які надходять у нейрон.",weights:"Weights — коефіцієнти важливості кожного входу. Саме вони змінюються під час навчання.",bias:"Bias — додатковий параметр, що зміщує поріг реакції нейрона.",sum:"Weighted sum — сума всіх входів після множення на їхні ваги плюс bias.",activation:"Activation — нелінійне перетворення, яке допомагає мережі моделювати складні залежності.",output:"Output — числовий сигнал, який нейрон передає далі або використовує як прогноз."},en:{inputs:"Inputs are the numerical values entering the neuron.",weights:"Weights are importance coefficients for each input. They are adjusted during training.",bias:"Bias is an additional parameter that shifts the neuron's response threshold.",sum:"The weighted sum combines all weighted inputs and bias.",activation:"Activation is a non-linear transformation that lets a network model complex relationships.",output:"Output is the numerical signal passed to later neurons or used as a prediction."}};const renderPart=p=>{box.textContent=copy[lang][p]};document.querySelectorAll(".neuron-part").forEach(b=>b.onclick=()=>{document.querySelectorAll(".neuron-part").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderPart(b.dataset.part)});renderPart("inputs")}
 function bindLayerTabs(){const box=document.getElementById("layerExplain");if(!box)return;const copy={uk:{input:"Input layer отримує початкові числові дані й передає їх далі у мережу.",hidden:"Hidden layers виконують послідовні перетворення й формують дедалі складніші представлення.",output:"Output layer перетворює фінальне представлення на прогноз, клас, значення або інший результат."},en:{input:"The input layer receives initial numerical data and passes it into the network.",hidden:"Hidden layers perform successive transformations and build increasingly complex representations.",output:"The output layer converts the final representation into a prediction, class, value, or other result."}};const show=k=>{box.textContent=copy[lang][k]};document.querySelectorAll(".layer-tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".layer-tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");show(b.dataset.layer)});show("input")}
 function bindTrainingTabs(){const box=document.getElementById("trainingExplain");if(!box)return;const copy={uk:{data:"Data — приклади, на яких мережа навчається.",forward:"Forward pass — дані проходять через мережу, яка формує прогноз.",loss:"Loss — числова оцінка того, наскільки прогноз відрізняється від правильної відповіді.",backprop:"Backpropagation — обчислення внеску параметрів мережі у помилку.",update:"Update — оптимізатор коригує ваги невеликими кроками."},en:{data:"Data are the examples used to train the network.",forward:"Forward pass moves data through the network to produce a prediction.",loss:"Loss is a numerical measure of how far the prediction is from the correct answer.",backprop:"Backpropagation calculates how network parameters contributed to the error.",update:"Update means the optimizer adjusts the weights in small steps."}};const show=k=>{box.textContent=copy[lang][k]};document.querySelectorAll(".training-tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".training-tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");show(b.dataset.step)});show("data")}
-function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();bindLayerTabs();bindTrainingTabs();if(current===8)assessment();}}
+function bindSummaryActions(){document.querySelectorAll("[data-review-course]").forEach(b=>b.onclick=()=>{current=0;render();window.scrollTo({top:0,behavior:"smooth"})})}
+function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();bindLayerTabs();bindTrainingTabs();bindSummaryActions();if(current===8)assessment();}}
 document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{lang=b.dataset.lang;localStorage.setItem("courseLang",lang);render()});
 $("startBtn").onclick=()=>{$("hero").classList.add("hidden");$("lesson").classList.remove("hidden");current=0;render()};
 $("nextBtn").onclick=()=>{if(current<9){current++;render();window.scrollTo({top:0,behavior:"smooth"})}};
