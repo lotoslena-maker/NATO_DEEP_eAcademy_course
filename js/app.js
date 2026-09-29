@@ -14,7 +14,7 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 <p><strong>Deep Learning (глибоке навчання)</strong> — це напрям машинного навчання, у якому багатошарові нейронні мережі навчаються знаходити закономірності у великих обсягах даних. Замість того щоб програміст вручну описував кожне правило, модель поступово налаштовує власні параметри на прикладах.</p>
 <p>Ідея проста: ми показуємо моделі багато прикладів, порівнюємо її відповіді з правильними, вимірюємо помилку і коригуємо внутрішні параметри так, щоб наступні відповіді ставали точнішими.</p>
 
-<div class="intro-visual" aria-label="Як працює глибоке навчання">
+<figure class="course-figure"><img src="assets/images/intro-overview-uk.svg" alt="Схема роботи Deep Learning: дані, нейронна мережа, навчання, результат"><figcaption>Загальна логіка роботи Deep Learning</figcaption></figure><div class="intro-visual" aria-label="Як працює глибоке навчання">
   <div class="intro-step"><span class="intro-icon">01</span><b>Дані</b><small>зображення, текст, звук, сигнали</small></div>
   <div class="intro-arrow">→</div>
   <div class="intro-step"><span class="intro-icon">02</span><b>Нейронна мережа</b><small>багато взаємопов’язаних шарів</small></div>
@@ -38,7 +38,7 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 <h3>Що означає слово «deep»?</h3>
 <p>Слово <strong>deep</strong> означає наявність кількох прихованих шарів у нейронній мережі. Кожен наступний шар може формувати складніше представлення даних. Наприклад, при аналізі зображення ранні шари можуть реагувати на контури, наступні — на форми, а глибші — на складні частини об’єктів.</p>
 
-<div class="mini-example">
+<figure class="course-figure"><img src="assets/images/feature-hierarchy-uk.svg" alt="Схема формування ознак: пікселі, краї, форми, об’єкт"><figcaption>Приклад того, як шари мережі поступово формують складніші ознаки</figcaption></figure><figure class="course-figure"><img src="assets/images/feature-hierarchy-en.svg" alt="Feature hierarchy: pixels, edges, shapes, object"><figcaption>Example of how deeper layers can build richer features</figcaption></figure><div class="mini-example">
   <div><span>Пікселі</span><small>сирі дані</small></div><b>→</b>
   <div><span>Краї</span><small>прості ознаки</small></div><b>→</b>
   <div><span>Форми</span><small>складніші ознаки</small></div><b>→</b>
@@ -82,7 +82,7 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 <p><strong>Deep Learning</strong> is a field of machine learning in which multi-layer neural networks learn patterns from large amounts of data. Instead of a programmer manually specifying every rule, the model gradually adjusts its own internal parameters from examples.</p>
 <p>The basic idea is simple: we show the model many examples, compare its outputs with the expected answers, measure the error, and adjust internal parameters so that future outputs become more accurate.</p>
 
-<div class="intro-visual" aria-label="How deep learning works">
+<figure class="course-figure"><img src="assets/images/intro-overview-en.svg" alt="Deep Learning workflow: data, neural network, learning, output"><figcaption>High-level Deep Learning workflow</figcaption></figure><div class="intro-visual" aria-label="How deep learning works">
   <div class="intro-step"><span class="intro-icon">01</span><b>Data</b><small>images, text, audio, signals</small></div>
   <div class="intro-arrow">→</div>
   <div class="intro-step"><span class="intro-icon">02</span><b>Neural network</b><small>many connected layers</small></div>
