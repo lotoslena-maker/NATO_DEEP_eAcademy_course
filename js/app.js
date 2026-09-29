@@ -57,7 +57,65 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 </div>
 
 <div class="takeaway"><strong>Перед переходом далі:</strong> запам’ятайте одну ідею — Deep Learning навчається на прикладах, використовуючи багатошарові нейронні мережі. У наступному розділі розберемо, де саме Deep Learning знаходиться у співвідношенні AI → ML → DL.</div>`},
-{title:"AI → ML → Deep Learning",lead:"Як пов’язані ключові поняття",body:`<p>Artificial Intelligence — найширше поняття. Machine Learning є його підмножиною, а Deep Learning — підмножиною ML.</p><div class="concepts"><article><b>AI</b><p>Системи, що виконують завдання, пов’язані з інтелектуальною поведінкою.</p></article><article><b>ML</b><p>Алгоритми, які навчаються закономірностям із даних.</p></article><article><b>DL</b><p>Машинне навчання на основі багатошарових нейронних мереж.</p></article></div><div class="takeaway"><strong>Запам’ятайте:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence.</div>`},
+{title:"AI → ML → Deep Learning",lead:"Як пов’язані штучний інтелект, машинне навчання та глибоке навчання — і чому ці поняття не є синонімами",body:`
+<div class="learning">
+  <strong>Після цього розділу ви зможете</strong>
+  <ul>
+    <li>пояснити різницю між AI, ML і Deep Learning;</li>
+    <li>побачити, як ці поняття вкладені одне в одне;</li>
+    <li>навести практичний приклад для кожного рівня.</li>
+  </ul>
+</div>
+
+<h3>Три поняття — три різні рівні</h3>
+<p><strong>Artificial Intelligence (AI)</strong> — найширше поняття. Воно охоплює методи, які дають комп’ютерним системам змогу виконувати завдання, що зазвичай пов’язують з інтелектуальною діяльністю: планування, пошук, розпізнавання, рекомендації, роботу з мовою або прийняття рішень.</p>
+<p><strong>Machine Learning (ML)</strong> — частина AI, у якій модель не отримує всі правила у готовому вигляді, а знаходить закономірності у даних. <strong>Deep Learning (DL)</strong> — частина ML, що використовує багатошарові нейронні мережі для роботи зі складними даними, такими як зображення, звук і текст.</p>
+
+<div class="hierarchy-wrap" aria-label="AI contains ML, ML contains Deep Learning">
+  <div class="hierarchy ai-ring"><span>AI</span><small>Artificial Intelligence</small>
+    <div class="hierarchy ml-ring"><span>ML</span><small>Machine Learning</small>
+      <div class="hierarchy dl-ring"><span>DL</span><small>Deep Learning</small></div>
+    </div>
+  </div>
+</div>
+
+<div class="takeaway"><strong>Запам’ятайте:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence. Але не кожна AI-система використовує ML, і не кожна ML-модель є Deep Learning.</div>
+
+<h3>AI — широка область</h3>
+<div class="photo-explain">
+  <img src="https://images.unsplash.com/photo-1581091872370-1c203d690c43?auto=format&fit=crop&w=1200&q=80" alt="Інженер аналізує дані на комп’ютері">
+  <div><p>AI може включати як навчання на даних, так і методи, які працюють за правилами: пошукові алгоритми, експертні системи, планування, логіку, оптимізацію.</p><p><strong>Приклад:</strong> навігаційна система може використовувати алгоритми пошуку маршруту, навіть якщо вона не навчається на прикладах.</p></div>
+</div>
+
+<h3>ML — модель навчається на даних</h3>
+<div class="photo-explain reverse">
+  <img src="https://images.unsplash.com/photo-1759510295429-755f1053dbb7?auto=format&fit=crop&w=1200&q=80" alt="Міський транспорт і дорожній рух">
+  <div><p>У Machine Learning ми даємо моделі дані та приклади, а вона виявляє закономірності, які допомагають прогнозувати або класифікувати нові дані.</p><p><strong>Приклад:</strong> модель може навчатися на історичних даних дорожнього руху, щоб прогнозувати завантаженість доріг або визначати тип транспортного засобу.</p></div>
+</div>
+
+<h3>Deep Learning — складні дані та глибокі мережі</h3>
+<div class="photo-explain">
+  <img src="https://images.unsplash.com/photo-1567894369905-b1e16dcc7a80?auto=format&fit=crop&w=1200&q=80" alt="Людина працює з аудіо у навушниках">
+  <div><p>Deep Learning використовує глибокі нейронні мережі з багатьма шарами. Вони можуть автоматично формувати корисні ознаки з сирих або слабко структурованих даних.</p><p><strong>Приклад:</strong> аудіосигнал може бути перетворений у текст без ручного опису кожної фонетичної ознаки.</p></div>
+</div>
+
+<h3>Порівняємо</h3>
+<div class="compare-grid">
+  <article><b>AI</b><p><strong>Фокус:</strong> інтелектуальна поведінка системи</p><p><strong>Методи:</strong> правила, пошук, логіка, ML та інші</p><p><strong>Дані:</strong> не завжди обов’язкові для навчання</p></article>
+  <article><b>ML</b><p><strong>Фокус:</strong> навчання закономірностям із даних</p><p><strong>Методи:</strong> дерева рішень, регресія, ансамблі, SVM тощо</p><p><strong>Дані:</strong> потрібні для навчання</p></article>
+  <article><b>DL</b><p><strong>Фокус:</strong> складні представлення у багатошарових мережах</p><p><strong>Методи:</strong> CNN, RNN, Transformers та інші нейромережеві архітектури</p><p><strong>Дані:</strong> часто потрібні значні обсяги</p></article>
+</div>
+
+<div class="check">
+  <h3>Міні-перевірка</h3>
+  <p><strong>Яке твердження правильне?</strong></p>
+  <button class="answer" data-correct="0">Усі AI-системи обов’язково використовують Deep Learning</button>
+  <button class="answer" data-correct="1">Deep Learning є частиною Machine Learning, а Machine Learning — частиною AI</button>
+  <button class="answer" data-correct="0">Machine Learning і Artificial Intelligence — це повністю однакові поняття</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Далі:</strong> тепер, коли ми розуміємо місце Deep Learning у структурі AI, переходимо до найменшого обчислювального елемента нейронної мережі — штучного нейрона.</div>`},
 {title:"Штучний нейрон",lead:"Найменший обчислювальний елемент нейронної мережі",body:`<div class="learning"><strong>Навчальна мета</strong><p>Зрозуміти, як вхідні дані перетворюються на вихід нейрона.</p></div><div class="neuron"><div class="inputs"><span>x₁</span><span>x₂</span><span>x₃</span></div><div class="arrow">→</div><div class="node">Σ<br><small>weights + bias</small></div><div class="arrow">→</div><div class="node activation">f(x)</div><div class="arrow">→</div><div class="output">ŷ</div></div><p>Кожен вхід має свою <strong>вагу</strong>. Нейрон об’єднує зважені входи, додає <strong>bias</strong> і передає результат через <strong>функцію активації</strong>.</p><div class="formula">z = w₁x₁ + w₂x₂ + … + b &nbsp; → &nbsp; y = f(z)</div><div class="takeaway"><strong>Просто:</strong> нейрон отримує сигнали → визначає їх важливість → формує вихід.</div>`},
 {title:"Архітектура нейронної мережі",lead:"Input → Hidden Layers → Output",body:`<p>Нейрони об’єднуються у шари. Кожен наступний шар формує дедалі складніше представлення даних.</p><div class="layers"><article><b>INPUT</b><p>Отримує початкові ознаки.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Виявляє прості закономірності.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Комбінує їх у складніші ознаки.</p></article><span>→</span><article><b>OUTPUT</b><p>Формує прогноз або клас.</p></article></div><div class="example"><strong>Приклад:</strong> для зображення ранні шари можуть реагувати на краї та лінії, глибші — на форми й частини об’єкта, а вихідний шар — визначати клас.</div>`},
 {title:"Як навчається нейронна мережа",lead:"Prediction → Error → Update → Repeat",body:`<p>Навчання — це багаторазове коригування параметрів мережі, щоб зменшувати помилку.</p><div class="flow"><span>1. Дані</span><b>→</b><span>2. Прогноз</span><b>→</b><span>3. Помилка</span><b>→</b><span>4. Оновлення ваг</span><b>↻</b></div><div class="concepts"><article><b>Forward pass</b><p>Мережа робить прогноз.</p></article><article><b>Loss</b><p>Функція втрат вимірює помилку.</p></article><article><b>Backpropagation</b><p>Обчислюється внесок параметрів у помилку.</p></article><article><b>Optimizer</b><p>Ваги змінюються для зменшення loss.</p></article></div>`},
@@ -126,7 +184,65 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 </div>
 
 <div class="takeaway"><strong>Before you continue:</strong> remember one core idea — Deep Learning learns from examples by using multi-layer neural networks. In the next section, we will place Deep Learning within the AI → ML → DL relationship.</div>`},
-{title:"AI → ML → Deep Learning",lead:"How the key concepts relate",body:`<p>Artificial Intelligence is the broadest concept. Machine Learning is a subset of AI, and Deep Learning is a subset of ML.</p><div class="concepts"><article><b>AI</b><p>Systems performing tasks associated with intelligent behaviour.</p></article><article><b>ML</b><p>Algorithms that learn patterns from data.</p></article><article><b>DL</b><p>Machine learning based on multi-layer neural networks.</p></article></div><div class="takeaway"><strong>Remember:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence.</div>`},
+{title:"AI → ML → Deep Learning",lead:"How Artificial Intelligence, Machine Learning, and Deep Learning relate — and why the terms are not interchangeable",body:`
+<div class="learning">
+  <strong>After this section, you will be able to</strong>
+  <ul>
+    <li>explain the difference between AI, ML, and Deep Learning;</li>
+    <li>recognise how the concepts are nested;</li>
+    <li>give a practical example for each level.</li>
+  </ul>
+</div>
+
+<h3>Three concepts — three different levels</h3>
+<p><strong>Artificial Intelligence (AI)</strong> is the broadest concept. It includes methods that enable computer systems to perform tasks commonly associated with intelligent behaviour, including planning, search, recognition, recommendations, language processing, and decision support.</p>
+<p><strong>Machine Learning (ML)</strong> is a part of AI in which a model learns patterns from data instead of receiving every rule explicitly. <strong>Deep Learning (DL)</strong> is a part of ML that uses multi-layer neural networks to work with complex data such as images, audio, and text.</p>
+
+<div class="hierarchy-wrap" aria-label="AI contains ML, ML contains Deep Learning">
+  <div class="hierarchy ai-ring"><span>AI</span><small>Artificial Intelligence</small>
+    <div class="hierarchy ml-ring"><span>ML</span><small>Machine Learning</small>
+      <div class="hierarchy dl-ring"><span>DL</span><small>Deep Learning</small></div>
+    </div>
+  </div>
+</div>
+
+<div class="takeaway"><strong>Remember:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence. However, not every AI system uses ML, and not every ML model is Deep Learning.</div>
+
+<h3>AI — the broad field</h3>
+<div class="photo-explain">
+  <img src="https://images.unsplash.com/photo-1581091872370-1c203d690c43?auto=format&fit=crop&w=1200&q=80" alt="Engineer analysing computer data">
+  <div><p>AI may include both learning-based systems and methods that work with explicit rules, such as search algorithms, expert systems, planning, logic, and optimisation.</p><p><strong>Example:</strong> a navigation system can use route-search algorithms even if it does not learn from examples.</p></div>
+</div>
+
+<h3>ML — the model learns from data</h3>
+<div class="photo-explain reverse">
+  <img src="https://images.unsplash.com/photo-1759510295429-755f1053dbb7?auto=format&fit=crop&w=1200&q=80" alt="Urban traffic and vehicles">
+  <div><p>In Machine Learning, we provide data and examples, and the model discovers patterns that help it classify or predict new data.</p><p><strong>Example:</strong> a model can learn from historical traffic data to forecast congestion or classify vehicle types.</p></div>
+</div>
+
+<h3>Deep Learning — complex data and deep networks</h3>
+<div class="photo-explain">
+  <img src="https://images.unsplash.com/photo-1567894369905-b1e16dcc7a80?auto=format&fit=crop&w=1200&q=80" alt="Person working with audio while wearing headphones">
+  <div><p>Deep Learning uses neural networks with many layers. These networks can automatically build useful feature representations from raw or weakly structured data.</p><p><strong>Example:</strong> an audio signal can be converted into text without manually defining every phonetic feature.</p></div>
+</div>
+
+<h3>Compare the three</h3>
+<div class="compare-grid">
+  <article><b>AI</b><p><strong>Focus:</strong> intelligent system behaviour</p><p><strong>Methods:</strong> rules, search, logic, ML, and others</p><p><strong>Data:</strong> training data is not always required</p></article>
+  <article><b>ML</b><p><strong>Focus:</strong> learning patterns from data</p><p><strong>Methods:</strong> decision trees, regression, ensembles, SVM, and others</p><p><strong>Data:</strong> required for training</p></article>
+  <article><b>DL</b><p><strong>Focus:</strong> complex representations in multi-layer networks</p><p><strong>Methods:</strong> CNNs, RNNs, Transformers, and other neural architectures</p><p><strong>Data:</strong> often requires substantial volumes</p></article>
+</div>
+
+<div class="check">
+  <h3>Mini check</h3>
+  <p><strong>Which statement is correct?</strong></p>
+  <button class="answer" data-correct="0">All AI systems must use Deep Learning</button>
+  <button class="answer" data-correct="1">Deep Learning is part of Machine Learning, and Machine Learning is part of AI</button>
+  <button class="answer" data-correct="0">Machine Learning and Artificial Intelligence mean exactly the same thing</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Next:</strong> now that we know where Deep Learning fits within AI, we can move to the smallest computational building block of a neural network — the artificial neuron.</div>`},
 {title:"Artificial Neuron",lead:"The basic computational element of a neural network",body:`<div class="learning"><strong>Learning objective</strong><p>Understand how inputs are transformed into a neuron's output.</p></div><div class="neuron"><div class="inputs"><span>x₁</span><span>x₂</span><span>x₃</span></div><div class="arrow">→</div><div class="node">Σ<br><small>weights + bias</small></div><div class="arrow">→</div><div class="node activation">f(x)</div><div class="arrow">→</div><div class="output">ŷ</div></div><p>Each input has a <strong>weight</strong>. The neuron combines weighted inputs, adds a <strong>bias</strong>, and passes the result through an <strong>activation function</strong>.</p><div class="formula">z = w₁x₁ + w₂x₂ + … + b &nbsp; → &nbsp; y = f(z)</div><div class="takeaway"><strong>Simply:</strong> signals in → importance is weighted → an output is produced.</div>`},
 {title:"Neural Network Architecture",lead:"Input → Hidden Layers → Output",body:`<p>Neurons are organised into layers. Successive layers can form increasingly complex representations of the data.</p><div class="layers"><article><b>INPUT</b><p>Receives initial features.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Detects simple patterns.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Combines them into richer features.</p></article><span>→</span><article><b>OUTPUT</b><p>Produces a prediction or class.</p></article></div><div class="example"><strong>Example:</strong> for an image, early layers may react to edges, deeper layers to shapes and object parts, and the output layer to a class.</div>`},
 {title:"How a Neural Network Learns",lead:"Prediction → Error → Update → Repeat",body:`<p>Training repeatedly adjusts network parameters to reduce error.</p><div class="flow"><span>1. Data</span><b>→</b><span>2. Prediction</span><b>→</b><span>3. Error</span><b>→</b><span>4. Weight update</span><b>↻</b></div><div class="concepts"><article><b>Forward pass</b><p>The network makes a prediction.</p></article><article><b>Loss</b><p>A loss function measures error.</p></article><article><b>Backpropagation</b><p>The contribution of parameters to error is calculated.</p></article><article><b>Optimizer</b><p>Weights are adjusted to reduce loss.</p></article></div>`},
