@@ -38,7 +38,7 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 <h3>Що означає слово «deep»?</h3>
 <p>Слово <strong>deep</strong> означає наявність кількох прихованих шарів у нейронній мережі. Кожен наступний шар може формувати складніше представлення даних. Наприклад, при аналізі зображення ранні шари можуть реагувати на контури, наступні — на форми, а глибші — на складні частини об’єктів.</p>
 
-<figure class="course-figure"><img src="assets/images/feature-hierarchy-uk.svg" alt="Схема формування ознак: пікселі, краї, форми, об’єкт"><figcaption>Приклад того, як шари мережі поступово формують складніші ознаки</figcaption></figure><figure class="course-figure"><img src="assets/images/feature-hierarchy-en.svg" alt="Feature hierarchy: pixels, edges, shapes, object"><figcaption>Example of how deeper layers can build richer features</figcaption></figure><div class="mini-example">
+<figure class="course-figure"><img src="assets/images/feature-hierarchy-uk.svg" alt="Схема формування ознак: пікселі, краї, форми, об’єкт"><figcaption>Приклад того, як шари мережі поступово формують складніші ознаки</figcaption></figure><div class="mini-example">
   <div><span>Пікселі</span><small>сирі дані</small></div><b>→</b>
   <div><span>Краї</span><small>прості ознаки</small></div><b>→</b>
   <div><span>Форми</span><small>складніші ознаки</small></div><b>→</b>
@@ -106,6 +106,7 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 <h3>What does “deep” mean?</h3>
 <p>The word <strong>deep</strong> refers to the use of multiple hidden layers in a neural network. Each successive layer can form a more complex representation of the data. In image analysis, for example, early layers may react to edges, later layers to shapes, and deeper layers to more complex parts of objects.</p>
 
+<figure class="course-figure"><img src="assets/images/feature-hierarchy-en.svg" alt="Feature hierarchy: pixels, edges, shapes, object"><figcaption>Example of how deeper layers can build richer features</figcaption></figure>
 <div class="mini-example">
   <div><span>Pixels</span><small>raw data</small></div><b>→</b>
   <div><span>Edges</span><small>simple features</small></div><b>→</b>
