@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360">
+<rect width="1400" height="360" rx="28" fill="#0a2036"/>
+<g font-family="Arial, sans-serif">
+  <text x="60" y="56" fill="#eef5fb" font-size="30" font-weight="700">Course concept map</text>
+  <text x="60" y="90" fill="#afc2d6" font-size="18">From the AI landscape to neural networks, training, and practical applications.</text>
+</g>
+<g stroke="#6fc7ff" stroke-width="4" fill="none" opacity=".8">
+  <line x1="150" y1="210" x2="300" y2="210"/><line x1="390" y1="210" x2="540" y2="210"/>
+  <line x1="630" y1="210" x2="780" y2="210"/><line x1="870" y1="210" x2="1020" y2="210"/>
+  <line x1="1110" y1="210" x2="1260" y2="210"/>
+</g>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+  <g>
+    <circle cx="105" cy="210" r="58" fill="#123c5e" stroke="#6fc7ff" stroke-width="3"/>
+    <text x="105" y="205" fill="#fff" font-size="28" font-weight="700">AI</text>
+    <text x="105" y="232" fill="#afc2d6" font-size="15">broad field</text>
+  </g>
+  <g>
+    <circle cx="345" cy="210" r="58" fill="#123c5e" stroke="#6fc7ff" stroke-width="3"/>
+    <text x="345" y="205" fill="#fff" font-size="28" font-weight="700">ML</text>
+    <text x="345" y="232" fill="#afc2d6" font-size="15">learning</text>
+  </g>
+  <g>
+    <circle cx="585" cy="210" r="58" fill="#372b69" stroke="#a892ff" stroke-width="3"/>
+    <text x="585" y="205" fill="#fff" font-size="28" font-weight="700">DL</text>
+    <text x="585" y="232" fill="#c9bbff" font-size="15">deep networks</text>
+  </g>
+  <g>
+    <circle cx="825" cy="210" r="58" fill="#372b69" stroke="#a892ff" stroke-width="3"/>
+    <text x="825" y="201" fill="#fff" font-size="22" font-weight="700">Neuron</text>
+    <text x="825" y="232" fill="#c9bbff" font-size="15">weights + bias</text>
+  </g>
+  <g>
+    <circle cx="1065" cy="210" r="58" fill="#164f40" stroke="#86e3b2" stroke-width="3"/>
+    <text x="1065" y="201" fill="#fff" font-size="22" font-weight="700">Training</text>
+    <text x="1065" y="232" fill="#a8e8c8" font-size="15">loss + update</text>
+  </g>
+  <g>
+    <circle cx="1305" cy="210" r="58" fill="#5a4320" stroke="#ffd27a" stroke-width="3"/>
+    <text x="1305" y="201" fill="#fff" font-size="20" font-weight="700">Applications</text>
+    <text x="1305" y="232" fill="#ffe0a6" font-size="15">vision • speech • text</text>
+  </g>
+</g>
+</svg>
