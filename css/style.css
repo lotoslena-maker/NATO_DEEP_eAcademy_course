@@ -41,3 +41,9 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background-ima
 .compare-grid b{font-size:1.25rem;color:var(--accent)}
 .compare-grid p{margin:.65rem 0;color:var(--muted)}
 @media(max-width:800px){.photo-explain,.photo-explain.reverse{grid-template-columns:1fr}.photo-explain.reverse img{order:0}.compare-grid{grid-template-columns:1fr}.ai-ring{width:330px;height:330px}.ml-ring{width:235px;height:235px}.dl-ring{width:135px;height:135px;padding-top:20px}.hierarchy span{font-size:1.15rem}.hierarchy small{font-size:.72rem}}
+
+/* Section 2 local reusable visuals */
+.section2-diagram{max-width:560px;margin:30px auto 34px}
+.section2-diagram img{aspect-ratio:1/1;object-fit:contain;background:transparent;border:0;box-shadow:none}
+.photo-explain img{background:#0b2742}
+@media(max-width:650px){.section2-diagram{max-width:360px}}
