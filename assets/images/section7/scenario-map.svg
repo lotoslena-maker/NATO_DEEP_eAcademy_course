@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c9d7b2"/><stop offset="1" stop-color="#8ba37d"/></linearGradient>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<path d="M0 500 C180 420,310 460,430 390 S720 300,900 355 S1080 480,1200 420" fill="none" stroke="#6aa8c7" stroke-width="55" opacity=".9"/>
+<path d="M80 120 C260 210,400 130,570 220 S910 240,1110 130" fill="none" stroke="#d4c5a6" stroke-width="22"/>
+<path d="M100 610 L310 470 L490 515 L680 390 L880 455 L1100 320" fill="none" stroke="#d7d7d7" stroke-width="14"/>
+<path d="M120 615 L315 475 L490 520 L682 395 L880 460 L1102 325" fill="none" stroke="#565d63" stroke-width="4"/>
+<g fill="#586a4c" opacity=".8">
+  <circle cx="180" cy="180" r="55"/><circle cx="260" cy="230" r="40"/><circle cx="760" cy="130" r="60"/><circle cx="840" cy="170" r="42"/><circle cx="980" cy="560" r="55"/><circle cx="1030" cy="600" r="36"/>
+</g>
+<g fill="#b9a98b">
+  <rect x="410" y="135" width="105" height="64" rx="6"/><rect x="540" y="165" width="85" height="54" rx="6"/>
+  <rect x="780" y="470" width="92" height="60" rx="6"/><rect x="900" y="430" width="80" height="52" rx="6"/>
+</g>
+<g font-family="Arial, sans-serif">
+  <rect x="28" y="28" width="280" height="72" rx="14" fill="#0a2036" opacity=".9"/>
+  <text x="52" y="58" fill="#eef5fb" font-size="24" font-weight="700">Geospatial context</text>
+  <text x="52" y="84" fill="#afc2d6" font-size="16">Illustrative training map</text>
+</g>
+</svg>
