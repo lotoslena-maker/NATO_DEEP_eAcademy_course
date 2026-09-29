@@ -91,3 +91,33 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background-ima
   .applications-flow{grid-template-columns:1fr}
   .applications-flow b{transform:rotate(90deg);text-align:center}
 }
+
+/* Section 10: Summary */
+.summary-enhanced{display:grid;gap:28px}
+.summary-complete{display:flex;gap:16px;align-items:flex-start;padding:22px;border:1px solid var(--line);border-radius:16px;background:rgba(16,42,70,.72)}
+.summary-complete h3{margin:0 0 8px}
+.summary-complete p{margin:0;color:var(--muted)}
+.summary-check{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:rgba(134,227,178,.14);border:1px solid #86e3b2;color:#86e3b2;font-size:1.35rem;font-weight:800}
+
+.summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.summary-grid article{position:relative;padding:20px 20px 20px 58px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.summary-grid article:last-child{grid-column:1/-1}
+.summary-grid span{position:absolute;left:18px;top:18px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(111,199,255,.14);border:1px solid var(--accent);color:var(--accent);font-weight:800}
+.summary-grid b{display:block;margin-bottom:8px;color:var(--text)}
+.summary-grid p{margin:0;color:var(--muted);line-height:1.55}
+
+.summary-can{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.summary-can div{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(16,42,70,.55);color:var(--text)}
+
+.summary-reflection{padding:20px;border-left:4px solid var(--accent);border-radius:12px;background:rgba(111,199,255,.08)}
+.summary-reflection strong{display:block;margin-bottom:8px;color:var(--accent)}
+.summary-reflection p{margin:0;color:var(--muted);line-height:1.6}
+
+.summary-actions{display:flex;justify-content:center;padding-top:4px}
+.summary-review{min-width:220px}
+
+@media(max-width:760px){
+  .summary-grid,.summary-can{grid-template-columns:1fr}
+  .summary-grid article:last-child{grid-column:auto}
+  .summary-complete{padding:18px}
+}
