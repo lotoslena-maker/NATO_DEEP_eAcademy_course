@@ -1,6 +1,62 @@
 const course={
 uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sections:[
-{title:"Вступ",lead:"Що таке Deep Learning і навіщо воно потрібне",body:`<div class="learning"><strong>Навчальна мета</strong><p>Пояснити, що таке глибоке навчання та чому воно є важливим напрямом ШІ.</p></div><h3>Глибоке навчання — коротко</h3><p>Deep Learning — підхід машинного навчання, у якому багатошарові нейронні мережі навчаються знаходити складні закономірності у даних.</p><div class="flow"><span>Дані</span><b>→</b><span>Нейронна мережа</span><b>→</b><span>Навчання</span><b>→</b><span>Результат</span></div><div class="check"><h3>Міні-перевірка</h3><p>Що найкраще описує Deep Learning?</p><button class="answer" data-correct="0">Набір жорстко заданих правил</button><button class="answer" data-correct="1">Навчання багатошарової нейронної мережі на даних</button><button class="answer" data-correct="0">Зберігання великих масивів даних</button><p class="feedback"></p></div>`},
+{title:"Вступ",lead:"Що таке Deep Learning, як воно працює на базовому рівні і чому стало одним із ключових напрямів сучасного ШІ",body:`
+<div class="learning intro-objectives">
+  <strong>Після цього розділу ви зможете</strong>
+  <ul>
+    <li>простими словами пояснити, що таке Deep Learning;</li>
+    <li>відрізнити навчання на даних від роботи за жорстко заданими правилами;</li>
+    <li>описати базовий шлях: дані → мережа → навчання → результат.</li>
+  </ul>
+</div>
+
+<h3>Що таке Deep Learning?</h3>
+<p><strong>Deep Learning (глибоке навчання)</strong> — це напрям машинного навчання, у якому багатошарові нейронні мережі навчаються знаходити закономірності у великих обсягах даних. Замість того щоб програміст вручну описував кожне правило, модель поступово налаштовує власні параметри на прикладах.</p>
+<p>Ідея проста: ми показуємо моделі багато прикладів, порівнюємо її відповіді з правильними, вимірюємо помилку і коригуємо внутрішні параметри так, щоб наступні відповіді ставали точнішими.</p>
+
+<div class="intro-visual" aria-label="Як працює глибоке навчання">
+  <div class="intro-step"><span class="intro-icon">01</span><b>Дані</b><small>зображення, текст, звук, сигнали</small></div>
+  <div class="intro-arrow">→</div>
+  <div class="intro-step"><span class="intro-icon">02</span><b>Нейронна мережа</b><small>багато взаємопов’язаних шарів</small></div>
+  <div class="intro-arrow">→</div>
+  <div class="intro-step"><span class="intro-icon">03</span><b>Навчання</b><small>помилка → коригування параметрів</small></div>
+  <div class="intro-arrow">→</div>
+  <div class="intro-step"><span class="intro-icon">04</span><b>Результат</b><small>клас, прогноз, текст або сигнал</small></div>
+</div>
+
+<div class="takeaway"><strong>Ключова відмінність:</strong> звичайна програма виконує правила, які написала людина. Модель Deep Learning навчається правилам поведінки з даних.</div>
+
+<h3>Навіщо це потрібно?</h3>
+<p>Deep Learning особливо корисне там, де ознаки складні, численні або важко описуються вручну. Наприклад, легко сказати людині: «знайди автомобіль на фото», але значно важче вручну записати всі правила, за якими комп’ютер має впізнати автомобіль за різного освітлення, кута огляду, фону чи масштабу.</p>
+
+<div class="intro-cases">
+  <article><div class="case-symbol">◉</div><b>Зображення</b><p>Модель може навчатися розпізнавати об’єкти, сцени або візуальні ознаки на прикладах.</p></article>
+  <article><div class="case-symbol">≋</div><b>Мовлення</b><p>Нейронні мережі можуть перетворювати аудіо на текст або синтезувати мовлення.</p></article>
+  <article><div class="case-symbol">Aa</div><b>Текст</b><p>Моделі можуть аналізувати, перекладати, узагальнювати та генерувати текст.</p></article>
+</div>
+
+<h3>Що означає слово «deep»?</h3>
+<p>Слово <strong>deep</strong> означає наявність кількох прихованих шарів у нейронній мережі. Кожен наступний шар може формувати складніше представлення даних. Наприклад, при аналізі зображення ранні шари можуть реагувати на контури, наступні — на форми, а глибші — на складні частини об’єктів.</p>
+
+<div class="mini-example">
+  <div><span>Пікселі</span><small>сирі дані</small></div><b>→</b>
+  <div><span>Краї</span><small>прості ознаки</small></div><b>→</b>
+  <div><span>Форми</span><small>складніші ознаки</small></div><b>→</b>
+  <div><span>Об’єкт</span><small>підсумкове розпізнавання</small></div>
+</div>
+
+<div class="example"><strong>Важливо:</strong> Deep Learning не «розуміє» світ так, як людина. Модель виявляє статистичні закономірності у даних і формує відповіді на основі того, чого навчилася. Тому якість результату залежить від даних, методу навчання та перевірки.</div>
+
+<div class="check">
+  <h3>Міні-перевірка</h3>
+  <p><strong>Що найкраще описує Deep Learning?</strong></p>
+  <button class="answer" data-correct="0">Система, яка працює лише за жорстко прописаними людиною правилами</button>
+  <button class="answer" data-correct="1">Навчання багатошарової нейронної мережі знаходити закономірності у даних</button>
+  <button class="answer" data-correct="0">Спосіб зберігання дуже великих наборів даних</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Перед переходом далі:</strong> запам’ятайте одну ідею — Deep Learning навчається на прикладах, використовуючи багатошарові нейронні мережі. У наступному розділі розберемо, де саме Deep Learning знаходиться у співвідношенні AI → ML → DL.</div>`},
 {title:"AI → ML → Deep Learning",lead:"Як пов’язані ключові поняття",body:`<p>Artificial Intelligence — найширше поняття. Machine Learning є його підмножиною, а Deep Learning — підмножиною ML.</p><div class="concepts"><article><b>AI</b><p>Системи, що виконують завдання, пов’язані з інтелектуальною поведінкою.</p></article><article><b>ML</b><p>Алгоритми, які навчаються закономірностям із даних.</p></article><article><b>DL</b><p>Машинне навчання на основі багатошарових нейронних мереж.</p></article></div><div class="takeaway"><strong>Запам’ятайте:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence.</div>`},
 {title:"Штучний нейрон",lead:"Найменший обчислювальний елемент нейронної мережі",body:`<div class="learning"><strong>Навчальна мета</strong><p>Зрозуміти, як вхідні дані перетворюються на вихід нейрона.</p></div><div class="neuron"><div class="inputs"><span>x₁</span><span>x₂</span><span>x₃</span></div><div class="arrow">→</div><div class="node">Σ<br><small>weights + bias</small></div><div class="arrow">→</div><div class="node activation">f(x)</div><div class="arrow">→</div><div class="output">ŷ</div></div><p>Кожен вхід має свою <strong>вагу</strong>. Нейрон об’єднує зважені входи, додає <strong>bias</strong> і передає результат через <strong>функцію активації</strong>.</p><div class="formula">z = w₁x₁ + w₂x₂ + … + b &nbsp; → &nbsp; y = f(z)</div><div class="takeaway"><strong>Просто:</strong> нейрон отримує сигнали → визначає їх важливість → формує вихід.</div>`},
 {title:"Архітектура нейронної мережі",lead:"Input → Hidden Layers → Output",body:`<p>Нейрони об’єднуються у шари. Кожен наступний шар формує дедалі складніше представлення даних.</p><div class="layers"><article><b>INPUT</b><p>Отримує початкові ознаки.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Виявляє прості закономірності.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Комбінує їх у складніші ознаки.</p></article><span>→</span><article><b>OUTPUT</b><p>Формує прогноз або клас.</p></article></div><div class="example"><strong>Приклад:</strong> для зображення ранні шари можуть реагувати на краї та лінії, глибші — на форми й частини об’єкта, а вихідний шар — визначати клас.</div>`},
@@ -12,7 +68,63 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 {title:"Summary",lead:"Ключові висновки",body:`<div class="summary"><h3>Ви пройшли модуль</h3><p>Тепер ви можете пояснити місце Deep Learning у структурі AI, базову роботу штучного нейрона, роль шарів мережі та загальний цикл навчання.</p><div class="flow"><span>AI</span><b>→</b><span>ML</span><b>→</b><span>DL</span><b>→</b><span>Neural Networks</span></div><p><strong>Головна думка:</strong> Deep Learning дає моделі змогу навчатися складним представленням із даних, але потребує належних даних, оцінювання та контролю.</p></div>`}
 ]},
 en:{start:"Start course",prev:"Back",next:"Next",sections:[
-{title:"Introduction",lead:"What Deep Learning is and why it matters",body:`<div class="learning"><strong>Learning objective</strong><p>Explain what deep learning is and why it is an important field of AI.</p></div><h3>Deep Learning — in brief</h3><p>Deep Learning is a machine-learning approach in which multi-layer neural networks learn complex patterns from data.</p><div class="flow"><span>Data</span><b>→</b><span>Neural Network</span><b>→</b><span>Learning</span><b>→</b><span>Result</span></div><div class="check"><h3>Mini check</h3><p>Which statement best describes Deep Learning?</p><button class="answer" data-correct="0">A fixed set of rules</button><button class="answer" data-correct="1">Training a multi-layer neural network on data</button><button class="answer" data-correct="0">Storing large datasets</button><p class="feedback"></p></div>`},
+{title:"Introduction",lead:"What Deep Learning is, how it works at a basic level, and why it has become one of the key areas of modern AI",body:`
+<div class="learning intro-objectives">
+  <strong>After this section, you will be able to</strong>
+  <ul>
+    <li>explain Deep Learning in simple terms;</li>
+    <li>distinguish learning from data from following fixed hand-written rules;</li>
+    <li>describe the basic path: data → network → learning → result.</li>
+  </ul>
+</div>
+
+<h3>What is Deep Learning?</h3>
+<p><strong>Deep Learning</strong> is a field of machine learning in which multi-layer neural networks learn patterns from large amounts of data. Instead of a programmer manually specifying every rule, the model gradually adjusts its own internal parameters from examples.</p>
+<p>The basic idea is simple: we show the model many examples, compare its outputs with the expected answers, measure the error, and adjust internal parameters so that future outputs become more accurate.</p>
+
+<div class="intro-visual" aria-label="How deep learning works">
+  <div class="intro-step"><span class="intro-icon">01</span><b>Data</b><small>images, text, audio, signals</small></div>
+  <div class="intro-arrow">→</div>
+  <div class="intro-step"><span class="intro-icon">02</span><b>Neural network</b><small>many connected layers</small></div>
+  <div class="intro-arrow">→</div>
+  <div class="intro-step"><span class="intro-icon">03</span><b>Learning</b><small>error → parameter adjustment</small></div>
+  <div class="intro-arrow">→</div>
+  <div class="intro-step"><span class="intro-icon">04</span><b>Result</b><small>class, prediction, text, or signal</small></div>
+</div>
+
+<div class="takeaway"><strong>Key difference:</strong> a conventional program follows rules written by a human. A Deep Learning model learns useful rules of behaviour from data.</div>
+
+<h3>Why is it useful?</h3>
+<p>Deep Learning is especially useful when relevant features are complex, numerous, or difficult to describe manually. For example, it is easy to tell a person “find a vehicle in this image”, but much harder to manually write every rule a computer would need to recognize that vehicle under different lighting, viewpoints, backgrounds, or scales.</p>
+
+<div class="intro-cases">
+  <article><div class="case-symbol">◉</div><b>Images</b><p>A model can learn to recognize objects, scenes, or visual features from examples.</p></article>
+  <article><div class="case-symbol">≋</div><b>Speech</b><p>Neural networks can convert audio into text or generate synthetic speech.</p></article>
+  <article><div class="case-symbol">Aa</div><b>Text</b><p>Models can analyse, translate, summarise, and generate text.</p></article>
+</div>
+
+<h3>What does “deep” mean?</h3>
+<p>The word <strong>deep</strong> refers to the use of multiple hidden layers in a neural network. Each successive layer can form a more complex representation of the data. In image analysis, for example, early layers may react to edges, later layers to shapes, and deeper layers to more complex parts of objects.</p>
+
+<div class="mini-example">
+  <div><span>Pixels</span><small>raw data</small></div><b>→</b>
+  <div><span>Edges</span><small>simple features</small></div><b>→</b>
+  <div><span>Shapes</span><small>richer features</small></div><b>→</b>
+  <div><span>Object</span><small>final recognition</small></div>
+</div>
+
+<div class="example"><strong>Important:</strong> Deep Learning does not “understand” the world in the same way people do. A model detects statistical patterns in data and produces outputs based on what it has learned. Its quality therefore depends on the data, the training process, and evaluation.</div>
+
+<div class="check">
+  <h3>Mini check</h3>
+  <p><strong>Which statement best describes Deep Learning?</strong></p>
+  <button class="answer" data-correct="0">A system that only follows fixed rules written by a human</button>
+  <button class="answer" data-correct="1">Training a multi-layer neural network to learn patterns from data</button>
+  <button class="answer" data-correct="0">A way to store very large datasets</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Before you continue:</strong> remember one core idea — Deep Learning learns from examples by using multi-layer neural networks. In the next section, we will place Deep Learning within the AI → ML → DL relationship.</div>`},
 {title:"AI → ML → Deep Learning",lead:"How the key concepts relate",body:`<p>Artificial Intelligence is the broadest concept. Machine Learning is a subset of AI, and Deep Learning is a subset of ML.</p><div class="concepts"><article><b>AI</b><p>Systems performing tasks associated with intelligent behaviour.</p></article><article><b>ML</b><p>Algorithms that learn patterns from data.</p></article><article><b>DL</b><p>Machine learning based on multi-layer neural networks.</p></article></div><div class="takeaway"><strong>Remember:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence.</div>`},
 {title:"Artificial Neuron",lead:"The basic computational element of a neural network",body:`<div class="learning"><strong>Learning objective</strong><p>Understand how inputs are transformed into a neuron's output.</p></div><div class="neuron"><div class="inputs"><span>x₁</span><span>x₂</span><span>x₃</span></div><div class="arrow">→</div><div class="node">Σ<br><small>weights + bias</small></div><div class="arrow">→</div><div class="node activation">f(x)</div><div class="arrow">→</div><div class="output">ŷ</div></div><p>Each input has a <strong>weight</strong>. The neuron combines weighted inputs, adds a <strong>bias</strong>, and passes the result through an <strong>activation function</strong>.</p><div class="formula">z = w₁x₁ + w₂x₂ + … + b &nbsp; → &nbsp; y = f(z)</div><div class="takeaway"><strong>Simply:</strong> signals in → importance is weighted → an output is produced.</div>`},
 {title:"Neural Network Architecture",lead:"Input → Hidden Layers → Output",body:`<p>Neurons are organised into layers. Successive layers can form increasingly complex representations of the data.</p><div class="layers"><article><b>INPUT</b><p>Receives initial features.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Detects simple patterns.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Combines them into richer features.</p></article><span>→</span><article><b>OUTPUT</b><p>Produces a prediction or class.</p></article></div><div class="example"><strong>Example:</strong> for an image, early layers may react to edges, deeper layers to shapes and object parts, and the output layer to a class.</div>`},
