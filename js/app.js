@@ -71,31 +71,28 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 <p><strong>Artificial Intelligence (AI)</strong> — найширше поняття. Воно охоплює методи, які дають комп’ютерним системам змогу виконувати завдання, що зазвичай пов’язують з інтелектуальною діяльністю: планування, пошук, розпізнавання, рекомендації, роботу з мовою або прийняття рішень.</p>
 <p><strong>Machine Learning (ML)</strong> — частина AI, у якій модель не отримує всі правила у готовому вигляді, а знаходить закономірності у даних. <strong>Deep Learning (DL)</strong> — частина ML, що використовує багатошарові нейронні мережі для роботи зі складними даними, такими як зображення, звук і текст.</p>
 
-<div class="hierarchy-wrap" aria-label="AI contains ML, ML contains Deep Learning">
-  <div class="hierarchy ai-ring"><span>AI</span><small>Artificial Intelligence</small>
-    <div class="hierarchy ml-ring"><span>ML</span><small>Machine Learning</small>
-      <div class="hierarchy dl-ring"><span>DL</span><small>Deep Learning</small></div>
-    </div>
-  </div>
-</div>
+<figure class="course-figure section2-diagram">
+  <img src="assets/images/section2/ai-ml-dl-circles.jpg" alt="Вкладена схема AI, ML і Deep Learning">
+  <figcaption>AI — найширша сфера; Machine Learning є її частиною, а Deep Learning — частиною Machine Learning.</figcaption>
+</figure>
 
 <div class="takeaway"><strong>Запам’ятайте:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence. Але не кожна AI-система використовує ML, і не кожна ML-модель є Deep Learning.</div>
 
 <h3>AI — широка область</h3>
 <div class="photo-explain">
-  <img src="https://images.unsplash.com/photo-1581091872370-1c203d690c43?auto=format&fit=crop&w=1200&q=80" alt="Інженер аналізує дані на комп’ютері">
+  <img src="assets/images/section2/female-analyst-command-center.jpg" alt="Аналітикиня працює з даними у сучасному командному центрі">
   <div><p>AI може включати як навчання на даних, так і методи, які працюють за правилами: пошукові алгоритми, експертні системи, планування, логіку, оптимізацію.</p><p><strong>Приклад:</strong> навігаційна система може використовувати алгоритми пошуку маршруту, навіть якщо вона не навчається на прикладах.</p></div>
 </div>
 
 <h3>ML — модель навчається на даних</h3>
 <div class="photo-explain reverse">
-  <img src="https://images.unsplash.com/photo-1759510295429-755f1053dbb7?auto=format&fit=crop&w=1200&q=80" alt="Міський транспорт і дорожній рух">
+  <img src="assets/images/section2/drone-over-desert.jpg" alt="Безпілотна платформа під час збору даних">
   <div><p>У Machine Learning ми даємо моделі дані та приклади, а вона виявляє закономірності, які допомагають прогнозувати або класифікувати нові дані.</p><p><strong>Приклад:</strong> модель може навчатися на історичних даних дорожнього руху, щоб прогнозувати завантаженість доріг або визначати тип транспортного засобу.</p></div>
 </div>
 
 <h3>Deep Learning — складні дані та глибокі мережі</h3>
 <div class="photo-explain">
-  <img src="https://images.unsplash.com/photo-1567894369905-b1e16dcc7a80?auto=format&fit=crop&w=1200&q=80" alt="Людина працює з аудіо у навушниках">
+  <img src="assets/images/section2/headset-woman.jpg" alt="Операторка у навушниках працює з аудіоданими">
   <div><p>Deep Learning використовує глибокі нейронні мережі з багатьма шарами. Вони можуть автоматично формувати корисні ознаки з сирих або слабко структурованих даних.</p><p><strong>Приклад:</strong> аудіосигнал може бути перетворений у текст без ручного опису кожної фонетичної ознаки.</p></div>
 </div>
 
@@ -198,31 +195,28 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 <p><strong>Artificial Intelligence (AI)</strong> is the broadest concept. It includes methods that enable computer systems to perform tasks commonly associated with intelligent behaviour, including planning, search, recognition, recommendations, language processing, and decision support.</p>
 <p><strong>Machine Learning (ML)</strong> is a part of AI in which a model learns patterns from data instead of receiving every rule explicitly. <strong>Deep Learning (DL)</strong> is a part of ML that uses multi-layer neural networks to work with complex data such as images, audio, and text.</p>
 
-<div class="hierarchy-wrap" aria-label="AI contains ML, ML contains Deep Learning">
-  <div class="hierarchy ai-ring"><span>AI</span><small>Artificial Intelligence</small>
-    <div class="hierarchy ml-ring"><span>ML</span><small>Machine Learning</small>
-      <div class="hierarchy dl-ring"><span>DL</span><small>Deep Learning</small></div>
-    </div>
-  </div>
-</div>
+<figure class="course-figure section2-diagram">
+  <img src="assets/images/section2/ai-ml-dl-circles.jpg" alt="Nested relationship between AI, ML, and Deep Learning">
+  <figcaption>AI is the broadest field; Machine Learning is a subset of AI, and Deep Learning is a subset of Machine Learning.</figcaption>
+</figure>
 
 <div class="takeaway"><strong>Remember:</strong> Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence. However, not every AI system uses ML, and not every ML model is Deep Learning.</div>
 
 <h3>AI — the broad field</h3>
 <div class="photo-explain">
-  <img src="https://images.unsplash.com/photo-1581091872370-1c203d690c43?auto=format&fit=crop&w=1200&q=80" alt="Engineer analysing computer data">
+  <img src="assets/images/section2/female-analyst-command-center.jpg" alt="Female analyst working with data in a modern command centre">
   <div><p>AI may include both learning-based systems and methods that work with explicit rules, such as search algorithms, expert systems, planning, logic, and optimisation.</p><p><strong>Example:</strong> a navigation system can use route-search algorithms even if it does not learn from examples.</p></div>
 </div>
 
 <h3>ML — the model learns from data</h3>
 <div class="photo-explain reverse">
-  <img src="https://images.unsplash.com/photo-1759510295429-755f1053dbb7?auto=format&fit=crop&w=1200&q=80" alt="Urban traffic and vehicles">
+  <img src="assets/images/section2/drone-over-desert.jpg" alt="Uncrewed aerial platform collecting data">
   <div><p>In Machine Learning, we provide data and examples, and the model discovers patterns that help it classify or predict new data.</p><p><strong>Example:</strong> a model can learn from historical traffic data to forecast congestion or classify vehicle types.</p></div>
 </div>
 
 <h3>Deep Learning — complex data and deep networks</h3>
 <div class="photo-explain">
-  <img src="https://images.unsplash.com/photo-1567894369905-b1e16dcc7a80?auto=format&fit=crop&w=1200&q=80" alt="Person working with audio while wearing headphones">
+  <img src="assets/images/section2/headset-woman.jpg" alt="Operator wearing a headset while working with audio data">
   <div><p>Deep Learning uses neural networks with many layers. These networks can automatically build useful feature representations from raw or weakly structured data.</p><p><strong>Example:</strong> an audio signal can be converted into text without manually defining every phonetic feature.</p></div>
 </div>
 
