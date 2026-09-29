@@ -203,7 +203,67 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 </div>
 
 <div class="takeaway"><strong>Далі:</strong> окремий нейрон — лише базовий елемент. У наступному розділі подивимося, як багато нейронів об’єднуються у вхідний, приховані та вихідний шари.</div>`},
-{title:"Архітектура нейронної мережі",lead:"Input → Hidden Layers → Output",body:`<p>Нейрони об’єднуються у шари. Кожен наступний шар формує дедалі складніше представлення даних.</p><div class="layers"><article><b>INPUT</b><p>Отримує початкові ознаки.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Виявляє прості закономірності.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Комбінує їх у складніші ознаки.</p></article><span>→</span><article><b>OUTPUT</b><p>Формує прогноз або клас.</p></article></div><div class="example"><strong>Приклад:</strong> для зображення ранні шари можуть реагувати на краї та лінії, глибші — на форми й частини об’єкта, а вихідний шар — визначати клас.</div>`},
+{title:"Архітектура нейронної мережі",lead:"Як окремі нейрони об’єднуються у шари й формують дедалі складніші представлення",body:`
+<div class="learning">
+  <strong>Після цього розділу ви зможете</strong>
+  <ul>
+    <li>розрізняти input, hidden та output layers;</li>
+    <li>пояснити, чому мережу називають «deep»;</li>
+    <li>описати, як прості ознаки поступово перетворюються на складніші.</li>
+  </ul>
+</div>
+
+<h3>Від одного нейрона — до мережі</h3>
+<p>Один нейрон виконує дуже просте перетворення. Але в нейронній мережі багато нейронів об’єднуються у <strong>шари</strong>. Вихід одного шару стає входом для наступного, тому мережа може будувати дедалі складніші представлення даних.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section4/network-layers.svg" alt="Схема нейронної мережі з input, hidden та output layers">
+  <figcaption>Типова структура: вхідний шар → один або кілька прихованих шарів → вихідний шар.</figcaption>
+</figure>
+
+<h3>Розберемо шари</h3>
+<div class="layer-tabs" aria-label="Інтерактивні шари нейронної мережі">
+  <button class="layer-tab active" data-layer="input">Input layer</button>
+  <button class="layer-tab" data-layer="hidden">Hidden layers</button>
+  <button class="layer-tab" data-layer="output">Output layer</button>
+</div>
+<div class="layer-explain" id="layerExplain"></div>
+
+<h3>Input layer — отримує дані</h3>
+<p>Вхідний шар приймає числові значення. Для зображення це можуть бути пікселі або вже підготовлені ознаки. Для аудіо — числові характеристики сигналу. Для табличних даних — значення окремих параметрів.</p>
+
+<h3>Hidden layers — формують представлення</h3>
+<p>Приховані шари називаються hidden не тому, що вони «приховують» інформацію, а тому, що вони знаходяться між входом і виходом. Саме тут мережа поступово комбінує прості ознаки у складніші.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section4/feature-hierarchy.svg" alt="Схема поступового формування ознак: пікселі, краї, форми, об’єкт">
+  <figcaption>Приклад ієрархії ознак: від простих числових сигналів до складнішого представлення об’єкта.</figcaption>
+</figure>
+
+<h3>Що означає «deep»?</h3>
+<p>Мережу називають <strong>deep</strong>, коли вона має кілька прихованих шарів. Кожен із них виконує нове перетворення. Тому глибина — це не «розумність» моделі сама по собі, а кількість послідовних рівнів представлення.</p>
+
+<h3>Реальний контекст: аналіз візуальних даних</h3>
+<div class="photo-explain">
+  <img src="assets/images/section2/female-analyst-command-center.jpg" alt="Аналітикиня працює з картографічними та візуальними даними">
+  <div>
+    <p>У задачах computer vision людина бачить готову сцену одразу. Нейронна мережа проходить до цього результату поступово: ранні шари реагують на базові ознаки, наступні — на їхні комбінації, а вихідний шар формує прогноз.</p>
+    <p><strong>Приклад:</strong> модель класифікації зображень може спочатку реагувати на контури, потім на форми, а на глибших рівнях — на характерні частини об’єкта.</p>
+  </div>
+</div>
+
+<div class="takeaway"><strong>Головна ідея:</strong> глибока мережа не «бачить» об’єкт одразу. Вона будує його представлення крок за кроком, проходячи через послідовність шарів.</div>
+
+<div class="check">
+  <h3>Міні-перевірка</h3>
+  <p><strong>Що найкраще описує hidden layers?</strong></p>
+  <button class="answer" data-correct="0">Вони лише зберігають вхідні файли</button>
+  <button class="answer" data-correct="1">Вони поступово формують складніші представлення даних</button>
+  <button class="answer" data-correct="0">Вони тільки показують готовий результат користувачу</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Далі:</strong> тепер ми бачимо, як влаштована мережа. У наступному розділі розберемо, як вона навчається — робить прогноз, вимірює помилку і змінює свої параметри.</div>`},
 {title:"Як навчається нейронна мережа",lead:"Prediction → Error → Update → Repeat",body:`<p>Навчання — це багаторазове коригування параметрів мережі, щоб зменшувати помилку.</p><div class="flow"><span>1. Дані</span><b>→</b><span>2. Прогноз</span><b>→</b><span>3. Помилка</span><b>→</b><span>4. Оновлення ваг</span><b>↻</b></div><div class="concepts"><article><b>Forward pass</b><p>Мережа робить прогноз.</p></article><article><b>Loss</b><p>Функція втрат вимірює помилку.</p></article><article><b>Backpropagation</b><p>Обчислюється внесок параметрів у помилку.</p></article><article><b>Optimizer</b><p>Ваги змінюються для зменшення loss.</p></article></div>`},
 {title:"Застосування Deep Learning",lead:"Де багатошарові мережі дають практичну цінність",body:`<div class="applications"><article><b>👁 Computer Vision</b><p>Класифікація та аналіз зображень і відео.</p></article><article><b>🗣 Speech</b><p>Розпізнавання та синтез мовлення.</p></article><article><b>📝 Language</b><p>Аналіз, переклад і генерація тексту.</p></article><article><b>📡 Signals</b><p>Пошук закономірностей у складних потоках сигналів.</p></article></div><div class="takeaway"><strong>Важливо:</strong> якість результату залежить не лише від архітектури, а й від даних, метрики, обчислювальних ресурсів та людського контролю.</div>`},
 {title:"Інтерактивний сценарій",lead:"Оберіть підхід для задачі",body:`<div class="scenario"><p><strong>Ситуація:</strong> потрібно автоматично розподілити велику колекцію зображень за відомими категоріями. Даних достатньо, а ознаки складно описати вручну.</p><p>Який підхід найбільш доречний у межах цього навчального прикладу?</p><button class="answer" data-correct="0">Створити вручну правило для кожного можливого зображення</button><button class="answer" data-correct="1">Навчити модель розпізнавати закономірності на прикладах</button><button class="answer" data-correct="0">Не використовувати дані для навчання</button><p class="feedback"></p></div>`},
@@ -416,7 +476,67 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 </div>
 
 <div class="takeaway"><strong>Next:</strong> one neuron is only the basic building block. In the next section, we will see how many neurons are organised into input, hidden, and output layers.</div>`},
-{title:"Neural Network Architecture",lead:"Input → Hidden Layers → Output",body:`<p>Neurons are organised into layers. Successive layers can form increasingly complex representations of the data.</p><div class="layers"><article><b>INPUT</b><p>Receives initial features.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Detects simple patterns.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Combines them into richer features.</p></article><span>→</span><article><b>OUTPUT</b><p>Produces a prediction or class.</p></article></div><div class="example"><strong>Example:</strong> for an image, early layers may react to edges, deeper layers to shapes and object parts, and the output layer to a class.</div>`},
+{title:"Neural Network Architecture",lead:"How individual neurons are organised into layers and build increasingly complex representations",body:`
+<div class="learning">
+  <strong>After this section, you will be able to</strong>
+  <ul>
+    <li>distinguish input, hidden, and output layers;</li>
+    <li>explain why a network is called “deep”;</li>
+    <li>describe how simple features become more complex representations.</li>
+  </ul>
+</div>
+
+<h3>From one neuron to a network</h3>
+<p>A single neuron performs a simple transformation. In a neural network, many neurons are organised into <strong>layers</strong>. The output of one layer becomes the input to the next, allowing the network to build increasingly complex representations of data.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section4/network-layers.svg" alt="Neural network diagram with input, hidden, and output layers">
+  <figcaption>Typical structure: input layer → one or more hidden layers → output layer.</figcaption>
+</figure>
+
+<h3>Explore the layers</h3>
+<div class="layer-tabs" aria-label="Interactive neural network layers">
+  <button class="layer-tab active" data-layer="input">Input layer</button>
+  <button class="layer-tab" data-layer="hidden">Hidden layers</button>
+  <button class="layer-tab" data-layer="output">Output layer</button>
+</div>
+<div class="layer-explain" id="layerExplain"></div>
+
+<h3>Input layer — receives data</h3>
+<p>The input layer receives numerical values. For an image, these may be pixels or prepared features. For audio, they may be numerical signal characteristics. For tabular data, they may be values of individual variables.</p>
+
+<h3>Hidden layers — build representations</h3>
+<p>Hidden layers are called “hidden” because they sit between input and output. This is where a network gradually combines simple features into richer representations.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section4/feature-hierarchy.svg" alt="Feature hierarchy from pixels to edges, shapes, and an object">
+  <figcaption>Example of a feature hierarchy: from simple numerical signals to a richer representation of an object.</figcaption>
+</figure>
+
+<h3>What does “deep” mean?</h3>
+<p>A network is called <strong>deep</strong> when it contains several hidden layers. Each layer performs another transformation. Depth therefore refers to the number of successive representation stages, not to “intelligence” by itself.</p>
+
+<h3>Real-world context: analysing visual data</h3>
+<div class="photo-explain">
+  <img src="assets/images/section2/female-analyst-command-center.jpg" alt="Analyst working with map and visual data">
+  <div>
+    <p>In computer vision, a person sees the complete scene immediately. A neural network reaches its result progressively: early layers respond to basic features, later layers combine them, and the output layer produces a prediction.</p>
+    <p><strong>Example:</strong> an image classifier may first respond to edges, then to shapes, and deeper layers may respond to characteristic parts of an object.</p>
+  </div>
+</div>
+
+<div class="takeaway"><strong>Main idea:</strong> a deep network does not recognise an object all at once. It builds a representation step by step through a sequence of layers.</div>
+
+<div class="check">
+  <h3>Mini check</h3>
+  <p><strong>What best describes hidden layers?</strong></p>
+  <button class="answer" data-correct="0">They only store input files</button>
+  <button class="answer" data-correct="1">They progressively build more complex representations of data</button>
+  <button class="answer" data-correct="0">They only display the final result to the user</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Next:</strong> now that we understand the network structure, the next section explains how it learns — by making predictions, measuring error, and updating parameters.</div>`},
 {title:"How a Neural Network Learns",lead:"Prediction → Error → Update → Repeat",body:`<p>Training repeatedly adjusts network parameters to reduce error.</p><div class="flow"><span>1. Data</span><b>→</b><span>2. Prediction</span><b>→</b><span>3. Error</span><b>→</b><span>4. Weight update</span><b>↻</b></div><div class="concepts"><article><b>Forward pass</b><p>The network makes a prediction.</p></article><article><b>Loss</b><p>A loss function measures error.</p></article><article><b>Backpropagation</b><p>The contribution of parameters to error is calculated.</p></article><article><b>Optimizer</b><p>Weights are adjusted to reduce loss.</p></article></div>`},
 {title:"Applications of Deep Learning",lead:"Where multi-layer networks create practical value",body:`<div class="applications"><article><b>👁 Computer Vision</b><p>Image and video classification and analysis.</p></article><article><b>🗣 Speech</b><p>Speech recognition and synthesis.</p></article><article><b>📝 Language</b><p>Text analysis, translation and generation.</p></article><article><b>📡 Signals</b><p>Finding patterns in complex signal streams.</p></article></div><div class="takeaway"><strong>Important:</strong> outcomes depend not only on architecture, but also on data, metrics, computing resources and human oversight.</div>`},
 {title:"Interactive Scenario",lead:"Choose an approach for the task",body:`<div class="scenario"><p><strong>Situation:</strong> a large image collection must be automatically assigned to known categories. There is sufficient training data and useful features are difficult to specify manually.</p><p>Which approach is most appropriate for this learning example?</p><button class="answer" data-correct="0">Write a manual rule for every possible image</button><button class="answer" data-correct="1">Train a model to learn patterns from examples</button><button class="answer" data-correct="0">Do not use data for learning</button><p class="feedback"></p></div>`},
@@ -431,7 +551,8 @@ const $=id=>document.getElementById(id);
 function assessment(){const box=$("assessment");if(!box)return;score=0;box.innerHTML=questions[lang].map((q,i)=>`<div class="assessment-q"><p><strong>${i+1}. ${q[0]}</strong></p>${q[1].map((a,j)=>`<button class="assessment-answer" data-q="${i}" data-a="${j}">${a}</button>`).join("")}</div>`).join("")+`<button id="submitAssessment" class="primary">${lang==="uk"?"Завершити оцінювання":"Submit assessment"}</button><div id="score"></div>`;document.querySelectorAll(".assessment-answer").forEach(b=>b.onclick=()=>{document.querySelectorAll(`.assessment-answer[data-q="${b.dataset.q}"]`).forEach(x=>x.classList.remove("selected"));b.classList.add("selected")});$("submitAssessment").onclick=()=>{score=0;questions[lang].forEach((q,i)=>{const s=document.querySelector(`.assessment-answer.selected[data-q="${i}"]`);if(s&&+s.dataset.a===q[2])score++});$("score").innerHTML=`<div class="scorebox"><strong>${score}/5 — ${score>=4?(lang==="uk"?"Успішно":"Passed"):(lang==="uk"?"Перегляньте матеріал і спробуйте ще раз":"Review the material and try again")}</strong></div>`}}
 function bindAnswers(){document.querySelectorAll(".answer").forEach(btn=>btn.onclick=()=>{const ok=btn.dataset.correct==="1",f=btn.parentElement.querySelector(".feedback");f.textContent=ok?(lang==="uk"?"Правильно.":"Correct."):(lang==="uk"?"Не зовсім. Спробуйте ще раз.":"Not quite. Try again.");f.className=`feedback ${ok?"ok":"retry"}`})}
 function bindNeuronParts(){const box=document.getElementById("neuronExplain");if(!box)return;const copy={uk:{inputs:"Inputs — числові значення, які надходять у нейрон.",weights:"Weights — коефіцієнти важливості кожного входу. Саме вони змінюються під час навчання.",bias:"Bias — додатковий параметр, що зміщує поріг реакції нейрона.",sum:"Weighted sum — сума всіх входів після множення на їхні ваги плюс bias.",activation:"Activation — нелінійне перетворення, яке допомагає мережі моделювати складні залежності.",output:"Output — числовий сигнал, який нейрон передає далі або використовує як прогноз."},en:{inputs:"Inputs are the numerical values entering the neuron.",weights:"Weights are importance coefficients for each input. They are adjusted during training.",bias:"Bias is an additional parameter that shifts the neuron's response threshold.",sum:"The weighted sum combines all weighted inputs and bias.",activation:"Activation is a non-linear transformation that lets a network model complex relationships.",output:"Output is the numerical signal passed to later neurons or used as a prediction."}};const renderPart=p=>{box.textContent=copy[lang][p]};document.querySelectorAll(".neuron-part").forEach(b=>b.onclick=()=>{document.querySelectorAll(".neuron-part").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderPart(b.dataset.part)});renderPart("inputs")}
-function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();if(current===8)assessment();}}
+function bindLayerTabs(){const box=document.getElementById("layerExplain");if(!box)return;const copy={uk:{input:"Input layer отримує початкові числові дані й передає їх далі у мережу.",hidden:"Hidden layers виконують послідовні перетворення й формують дедалі складніші представлення.",output:"Output layer перетворює фінальне представлення на прогноз, клас, значення або інший результат."},en:{input:"The input layer receives initial numerical data and passes it into the network.",hidden:"Hidden layers perform successive transformations and build increasingly complex representations.",output:"The output layer converts the final representation into a prediction, class, value, or other result."}};const show=k=>{box.textContent=copy[lang][k]};document.querySelectorAll(".layer-tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".layer-tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");show(b.dataset.layer)});show("input")}
+function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();bindLayerTabs();if(current===8)assessment();}}
 document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{lang=b.dataset.lang;localStorage.setItem("courseLang",lang);render()});
 $("startBtn").onclick=()=>{$("hero").classList.add("hidden");$("lesson").classList.remove("hidden");current=0;render()};
 $("nextBtn").onclick=()=>{if(current<9){current++;render();window.scrollTo({top:0,behavior:"smooth"})}};
