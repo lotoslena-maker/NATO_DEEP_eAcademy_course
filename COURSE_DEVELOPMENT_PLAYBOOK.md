@@ -205,6 +205,18 @@ Assets:
 - `feature-hierarchy.svg`
 
 ### Section 5 — How a Neural Network Learns
+Статус: **реалізовано, очікує перевірки GitHub Pages**.
+
+Виконано:
+- розширений UA/EN контент;
+- окрема схема training cycle;
+- окремий loss curve;
+- реалістичне фото робочого місця;
+- інтерактивні етапи навчання;
+- mini-check.
+
+Наступна дія: QA живої сторінки.
+
 Потрібно:
 1. forward pass;
 2. prediction;
@@ -220,6 +232,17 @@ Assets:
 - `training-workstation.jpg`
 
 ### Section 6 — Applications of Deep Learning
+Статус: **реалізовано, очікує перевірки GitHub Pages**.
+
+Виконано:
+- розширений UA/EN контент;
+- 4 окремі image assets для Computer Vision, Speech, Language і Signals;
+- картки input → task → output;
+- адаптивна сітка;
+- mini-check.
+
+Наступна дія: QA живої сторінки.
+
 Потрібно:
 - Computer Vision;
 - Speech;
