@@ -121,3 +121,18 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background-ima
   .summary-grid article:last-child{grid-column:auto}
   .summary-complete{padding:18px}
 }
+
+/* Section 7: Interactive Scenario */
+.scenario-assets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 32px}
+.scenario-assets figure{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.scenario-assets img{display:block;width:100%;height:220px;object-fit:cover;background:#0b2742}
+.scenario-assets figcaption{padding:12px 14px 14px;color:var(--muted);line-height:1.5;font-size:.92rem}
+.scenario-step{display:grid;gap:10px;margin:14px 0 30px}
+.scenario-choice{width:100%;text-align:left;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:14px 16px;border-radius:12px;cursor:pointer;transition:.2s}
+.scenario-choice:hover,.scenario-choice.selected{border-color:var(--accent);background:rgba(111,199,255,.08)}
+.scenario-choice.correct{border-color:#86e3b2;background:rgba(134,227,178,.1)}
+.scenario-choice.wrong{border-color:#ff9b9b;background:rgba(255,155,155,.08)}
+.scenario-feedback{min-height:24px;padding:4px 2px;color:var(--muted);line-height:1.55}
+.scenario-feedback.ok{color:#86e3b2}
+.scenario-feedback.retry{color:#ffd27a}
+@media(max-width:860px){.scenario-assets{grid-template-columns:1fr}.scenario-assets img{height:240px}}
