@@ -113,7 +113,87 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 </div>
 
 <div class="takeaway"><strong>Далі:</strong> тепер, коли ми розуміємо місце Deep Learning у структурі AI, переходимо до найменшого обчислювального елемента нейронної мережі — штучного нейрона.</div>`},
-{title:"Штучний нейрон",lead:"Найменший обчислювальний елемент нейронної мережі",body:`<div class="learning"><strong>Навчальна мета</strong><p>Зрозуміти, як вхідні дані перетворюються на вихід нейрона.</p></div><div class="neuron"><div class="inputs"><span>x₁</span><span>x₂</span><span>x₃</span></div><div class="arrow">→</div><div class="node">Σ<br><small>weights + bias</small></div><div class="arrow">→</div><div class="node activation">f(x)</div><div class="arrow">→</div><div class="output">ŷ</div></div><p>Кожен вхід має свою <strong>вагу</strong>. Нейрон об’єднує зважені входи, додає <strong>bias</strong> і передає результат через <strong>функцію активації</strong>.</p><div class="formula">z = w₁x₁ + w₂x₂ + … + b &nbsp; → &nbsp; y = f(z)</div><div class="takeaway"><strong>Просто:</strong> нейрон отримує сигнали → визначає їх важливість → формує вихід.</div>`},
+{title:"Штучний нейрон",lead:"Як вхідні дані, ваги, bias і функція активації разом формують один вихід",body:`
+<div class="learning">
+  <strong>Після цього розділу ви зможете</strong>
+  <ul>
+    <li>назвати основні частини штучного нейрона;</li>
+    <li>пояснити роль ваги, bias і функції активації;</li>
+    <li>описати шлях від вхідного сигналу до виходу нейрона.</li>
+  </ul>
+</div>
+
+<h3>Штучний нейрон — це маленький обчислювальний блок</h3>
+<p>Штучний нейрон отримує кілька вхідних значень, оцінює їх важливість за допомогою <strong>ваг</strong>, додає <strong>bias</strong>, обчислює суму і передає її через <strong>функцію активації</strong>. На виході отримуємо одне нове значення.</p>
+<p>Один нейрон дуже простий. Але коли тисячі або мільйони таких елементів об’єднуються у шари, мережа може формувати складні представлення даних.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section3/artificial-neuron.svg" alt="Схема штучного нейрона з входами, вагами, bias, сумою, активацією та виходом">
+  <figcaption>Базова логіка штучного нейрона: входи → ваги → сума + bias → активація → вихід.</figcaption>
+</figure>
+
+<div class="takeaway"><strong>Коротко:</strong> нейрон не просто додає числа. Він враховує, які вхідні сигнали важливіші, а які — менш важливі.</div>
+
+<h3>Що може бути входом?</h3>
+<div class="photo-explain">
+  <img src="assets/images/section3/sensor-inputs.jpg" alt="Аналітикиня працює з різними цифровими та сенсорними даними">
+  <div>
+    <p>Вхід <strong>x</strong> — це числове представлення даних. Це може бути яскравість пікселя, частота аудіосигналу, показник сенсора, координата, температура або числова ознака об’єкта.</p>
+    <p><strong>Приклад:</strong> для системи аналізу зображення один вхід може відповідати значенню окремого пікселя або ознаці, сформованій попереднім шаром.</p>
+  </div>
+</div>
+
+<h3>Розберемо нейрон по частинах</h3>
+<div class="neuron-parts" aria-label="Інтерактивні частини штучного нейрона">
+  <button class="neuron-part active" data-part="inputs">Inputs</button>
+  <button class="neuron-part" data-part="weights">Weights</button>
+  <button class="neuron-part" data-part="bias">Bias</button>
+  <button class="neuron-part" data-part="sum">Weighted sum</button>
+  <button class="neuron-part" data-part="activation">Activation</button>
+  <button class="neuron-part" data-part="output">Output</button>
+</div>
+<div class="neuron-explain" id="neuronExplain"></div>
+
+<h3>1. Inputs — вхідні значення</h3>
+<p>Позначення <strong>x₁, x₂, x₃…</strong> — це числові значення, які надходять у нейрон. Сам по собі нейрон не «бачить» фото і не «чує» звук — він працює з числами.</p>
+
+<h3>2. Weights — наскільки важливий кожен вхід</h3>
+<p>Кожен вхід множиться на свою вагу <strong>w</strong>. Велика додатна вага підсилює вплив сигналу. Вага близька до нуля робить сигнал менш важливим. Від’ємна вага може послаблювати або змінювати напрям його впливу.</p>
+
+<div class="formula">z = w₁x₁ + w₂x₂ + w₃x₃ + b</div>
+
+<h3>3. Bias — додаткове зміщення</h3>
+<p><strong>Bias</strong> — це окремий параметр, який додається до зваженої суми. Він дає нейрону додаткову гнучкість: модель може зміщувати поріг реакції, навіть коли всі входи дорівнюють нулю.</p>
+
+<h3>4. Activation — вирішує, яким буде вихід</h3>
+<p>Після обчислення зваженої суми значення проходить через функцію активації. Вона додає нелінійність, без якої складна нейронна мережа поводилася б майже як одна велика лінійна формула.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section3/activation-output.svg" alt="Схема перетворення зваженої суми функцією активації у вихід">
+  <figcaption>Функція активації перетворює внутрішню суму нейрона на його вихідне значення.</figcaption>
+</figure>
+
+<h3>Реальний приклад: аудіосигнал</h3>
+<div class="photo-explain reverse">
+  <img src="assets/images/section3/audio-signal-input.jpg" alt="Операторка у гарнітурі працює з аудіосигналом">
+  <div>
+    <p>У задачі розпізнавання мовлення входами можуть бути числові характеристики коротких фрагментів звуку. Різні нейрони навчаються реагувати на різні комбінації таких ознак.</p>
+    <p>Один нейрон не «розпізнає фразу». Він формує лише один маленький проміжний сигнал, який потім використовується наступними нейронами.</p>
+  </div>
+</div>
+
+<div class="example"><strong>Важливо:</strong> ваги та bias не задаються вручну для кожного нейрона. Під час навчання модель поступово змінює їх, щоб зменшувати помилку.</div>
+
+<div class="check">
+  <h3>Міні-перевірка</h3>
+  <p><strong>Що саме визначає, наскільки сильно окремий вхід впливає на результат нейрона?</strong></p>
+  <button class="answer" data-correct="0">Назва вхідної змінної</button>
+  <button class="answer" data-correct="1">Вага цього входу</button>
+  <button class="answer" data-correct="0">Кількість файлів у наборі даних</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Далі:</strong> окремий нейрон — лише базовий елемент. У наступному розділі подивимося, як багато нейронів об’єднуються у вхідний, приховані та вихідний шари.</div>`},
 {title:"Архітектура нейронної мережі",lead:"Input → Hidden Layers → Output",body:`<p>Нейрони об’єднуються у шари. Кожен наступний шар формує дедалі складніше представлення даних.</p><div class="layers"><article><b>INPUT</b><p>Отримує початкові ознаки.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Виявляє прості закономірності.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Комбінує їх у складніші ознаки.</p></article><span>→</span><article><b>OUTPUT</b><p>Формує прогноз або клас.</p></article></div><div class="example"><strong>Приклад:</strong> для зображення ранні шари можуть реагувати на краї та лінії, глибші — на форми й частини об’єкта, а вихідний шар — визначати клас.</div>`},
 {title:"Як навчається нейронна мережа",lead:"Prediction → Error → Update → Repeat",body:`<p>Навчання — це багаторазове коригування параметрів мережі, щоб зменшувати помилку.</p><div class="flow"><span>1. Дані</span><b>→</b><span>2. Прогноз</span><b>→</b><span>3. Помилка</span><b>→</b><span>4. Оновлення ваг</span><b>↻</b></div><div class="concepts"><article><b>Forward pass</b><p>Мережа робить прогноз.</p></article><article><b>Loss</b><p>Функція втрат вимірює помилку.</p></article><article><b>Backpropagation</b><p>Обчислюється внесок параметрів у помилку.</p></article><article><b>Optimizer</b><p>Ваги змінюються для зменшення loss.</p></article></div>`},
 {title:"Застосування Deep Learning",lead:"Де багатошарові мережі дають практичну цінність",body:`<div class="applications"><article><b>👁 Computer Vision</b><p>Класифікація та аналіз зображень і відео.</p></article><article><b>🗣 Speech</b><p>Розпізнавання та синтез мовлення.</p></article><article><b>📝 Language</b><p>Аналіз, переклад і генерація тексту.</p></article><article><b>📡 Signals</b><p>Пошук закономірностей у складних потоках сигналів.</p></article></div><div class="takeaway"><strong>Важливо:</strong> якість результату залежить не лише від архітектури, а й від даних, метрики, обчислювальних ресурсів та людського контролю.</div>`},
@@ -237,7 +317,87 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 </div>
 
 <div class="takeaway"><strong>Next:</strong> now that we know where Deep Learning fits within AI, we can move to the smallest computational building block of a neural network — the artificial neuron.</div>`},
-{title:"Artificial Neuron",lead:"The basic computational element of a neural network",body:`<div class="learning"><strong>Learning objective</strong><p>Understand how inputs are transformed into a neuron's output.</p></div><div class="neuron"><div class="inputs"><span>x₁</span><span>x₂</span><span>x₃</span></div><div class="arrow">→</div><div class="node">Σ<br><small>weights + bias</small></div><div class="arrow">→</div><div class="node activation">f(x)</div><div class="arrow">→</div><div class="output">ŷ</div></div><p>Each input has a <strong>weight</strong>. The neuron combines weighted inputs, adds a <strong>bias</strong>, and passes the result through an <strong>activation function</strong>.</p><div class="formula">z = w₁x₁ + w₂x₂ + … + b &nbsp; → &nbsp; y = f(z)</div><div class="takeaway"><strong>Simply:</strong> signals in → importance is weighted → an output is produced.</div>`},
+{title:"Artificial Neuron",lead:"How inputs, weights, bias, and an activation function combine to produce one output",body:`
+<div class="learning">
+  <strong>After this section, you will be able to</strong>
+  <ul>
+    <li>name the main parts of an artificial neuron;</li>
+    <li>explain the role of weights, bias, and activation;</li>
+    <li>describe the path from an input signal to a neuron output.</li>
+  </ul>
+</div>
+
+<h3>An artificial neuron is a small computational block</h3>
+<p>An artificial neuron receives several input values, evaluates their importance using <strong>weights</strong>, adds a <strong>bias</strong>, computes a sum, and passes it through an <strong>activation function</strong>. The result is one new output value.</p>
+<p>A single neuron is simple. But when thousands or millions of these elements are connected in layers, a network can build increasingly complex representations of data.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section3/artificial-neuron.svg" alt="Artificial neuron with inputs, weights, bias, weighted sum, activation, and output">
+  <figcaption>Basic neuron logic: inputs → weights → sum + bias → activation → output.</figcaption>
+</figure>
+
+<div class="takeaway"><strong>In short:</strong> a neuron does more than add numbers. It learns which input signals should matter more and which should matter less.</div>
+
+<h3>What can an input be?</h3>
+<div class="photo-explain">
+  <img src="assets/images/section3/sensor-inputs.jpg" alt="Analyst working with multiple digital and sensor data sources">
+  <div>
+    <p>An input <strong>x</strong> is a numerical representation of data. It could be a pixel intensity, an audio frequency, a sensor reading, a coordinate, a temperature value, or another numerical feature.</p>
+    <p><strong>Example:</strong> in image analysis, an input may represent a pixel value or a feature produced by a previous layer.</p>
+  </div>
+</div>
+
+<h3>Explore the parts of a neuron</h3>
+<div class="neuron-parts" aria-label="Interactive artificial neuron parts">
+  <button class="neuron-part active" data-part="inputs">Inputs</button>
+  <button class="neuron-part" data-part="weights">Weights</button>
+  <button class="neuron-part" data-part="bias">Bias</button>
+  <button class="neuron-part" data-part="sum">Weighted sum</button>
+  <button class="neuron-part" data-part="activation">Activation</button>
+  <button class="neuron-part" data-part="output">Output</button>
+</div>
+<div class="neuron-explain" id="neuronExplain"></div>
+
+<h3>1. Inputs</h3>
+<p><strong>x₁, x₂, x₃…</strong> are numerical values entering the neuron. The neuron does not directly “see” an image or “hear” sound — it operates on numbers.</p>
+
+<h3>2. Weights — how important is each input?</h3>
+<p>Each input is multiplied by its own <strong>weight w</strong>. A large positive weight strengthens a signal. A weight near zero makes it less important. A negative weight can reduce or reverse its influence.</p>
+
+<div class="formula">z = w₁x₁ + w₂x₂ + w₃x₃ + b</div>
+
+<h3>3. Bias — an additional shift</h3>
+<p><strong>Bias</strong> is a separate parameter added to the weighted sum. It gives the neuron extra flexibility by shifting its response threshold even when all input values are zero.</p>
+
+<h3>4. Activation — shaping the output</h3>
+<p>After the weighted sum is calculated, the value passes through an activation function. Activation adds non-linearity; without it, a deep network would behave much more like a single large linear formula.</p>
+
+<figure class="course-figure">
+  <img src="assets/images/section3/activation-output.svg" alt="Weighted sum transformed by an activation function into an output">
+  <figcaption>An activation function transforms the neuron's internal sum into an output value.</figcaption>
+</figure>
+
+<h3>Real-world example: an audio signal</h3>
+<div class="photo-explain reverse">
+  <img src="assets/images/section3/audio-signal-input.jpg" alt="Operator wearing a headset while working with audio signals">
+  <div>
+    <p>In speech-recognition tasks, inputs can represent numerical characteristics of short audio segments. Different neurons learn to respond to different combinations of these features.</p>
+    <p>A single neuron does not “recognise a sentence”. It produces one small intermediate signal that can be used by later neurons.</p>
+  </div>
+</div>
+
+<div class="example"><strong>Important:</strong> weights and bias are not manually set for every neuron. During training, the model gradually changes them to reduce error.</div>
+
+<div class="check">
+  <h3>Mini check</h3>
+  <p><strong>What determines how strongly an individual input affects a neuron's result?</strong></p>
+  <button class="answer" data-correct="0">The name of the input variable</button>
+  <button class="answer" data-correct="1">The weight of that input</button>
+  <button class="answer" data-correct="0">The number of files in the dataset</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Next:</strong> one neuron is only the basic building block. In the next section, we will see how many neurons are organised into input, hidden, and output layers.</div>`},
 {title:"Neural Network Architecture",lead:"Input → Hidden Layers → Output",body:`<p>Neurons are organised into layers. Successive layers can form increasingly complex representations of the data.</p><div class="layers"><article><b>INPUT</b><p>Receives initial features.</p></article><span>→</span><article><b>HIDDEN 1</b><p>Detects simple patterns.</p></article><span>→</span><article><b>HIDDEN 2+</b><p>Combines them into richer features.</p></article><span>→</span><article><b>OUTPUT</b><p>Produces a prediction or class.</p></article></div><div class="example"><strong>Example:</strong> for an image, early layers may react to edges, deeper layers to shapes and object parts, and the output layer to a class.</div>`},
 {title:"How a Neural Network Learns",lead:"Prediction → Error → Update → Repeat",body:`<p>Training repeatedly adjusts network parameters to reduce error.</p><div class="flow"><span>1. Data</span><b>→</b><span>2. Prediction</span><b>→</b><span>3. Error</span><b>→</b><span>4. Weight update</span><b>↻</b></div><div class="concepts"><article><b>Forward pass</b><p>The network makes a prediction.</p></article><article><b>Loss</b><p>A loss function measures error.</p></article><article><b>Backpropagation</b><p>The contribution of parameters to error is calculated.</p></article><article><b>Optimizer</b><p>Weights are adjusted to reduce loss.</p></article></div>`},
 {title:"Applications of Deep Learning",lead:"Where multi-layer networks create practical value",body:`<div class="applications"><article><b>👁 Computer Vision</b><p>Image and video classification and analysis.</p></article><article><b>🗣 Speech</b><p>Speech recognition and synthesis.</p></article><article><b>📝 Language</b><p>Text analysis, translation and generation.</p></article><article><b>📡 Signals</b><p>Finding patterns in complex signal streams.</p></article></div><div class="takeaway"><strong>Important:</strong> outcomes depend not only on architecture, but also on data, metrics, computing resources and human oversight.</div>`},
@@ -252,7 +412,8 @@ let lang=localStorage.getItem("courseLang")||"uk",current=0,score=0;
 const $=id=>document.getElementById(id);
 function assessment(){const box=$("assessment");if(!box)return;score=0;box.innerHTML=questions[lang].map((q,i)=>`<div class="assessment-q"><p><strong>${i+1}. ${q[0]}</strong></p>${q[1].map((a,j)=>`<button class="assessment-answer" data-q="${i}" data-a="${j}">${a}</button>`).join("")}</div>`).join("")+`<button id="submitAssessment" class="primary">${lang==="uk"?"Завершити оцінювання":"Submit assessment"}</button><div id="score"></div>`;document.querySelectorAll(".assessment-answer").forEach(b=>b.onclick=()=>{document.querySelectorAll(`.assessment-answer[data-q="${b.dataset.q}"]`).forEach(x=>x.classList.remove("selected"));b.classList.add("selected")});$("submitAssessment").onclick=()=>{score=0;questions[lang].forEach((q,i)=>{const s=document.querySelector(`.assessment-answer.selected[data-q="${i}"]`);if(s&&+s.dataset.a===q[2])score++});$("score").innerHTML=`<div class="scorebox"><strong>${score}/5 — ${score>=4?(lang==="uk"?"Успішно":"Passed"):(lang==="uk"?"Перегляньте матеріал і спробуйте ще раз":"Review the material and try again")}</strong></div>`}}
 function bindAnswers(){document.querySelectorAll(".answer").forEach(btn=>btn.onclick=()=>{const ok=btn.dataset.correct==="1",f=btn.parentElement.querySelector(".feedback");f.textContent=ok?(lang==="uk"?"Правильно.":"Correct."):(lang==="uk"?"Не зовсім. Спробуйте ще раз.":"Not quite. Try again.");f.className=`feedback ${ok?"ok":"retry"}`})}
-function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();if(current===8)assessment();}}
+function bindNeuronParts(){const box=document.getElementById("neuronExplain");if(!box)return;const copy={uk:{inputs:"Inputs — числові значення, які надходять у нейрон.",weights:"Weights — коефіцієнти важливості кожного входу. Саме вони змінюються під час навчання.",bias:"Bias — додатковий параметр, що зміщує поріг реакції нейрона.",sum:"Weighted sum — сума всіх входів після множення на їхні ваги плюс bias.",activation:"Activation — нелінійне перетворення, яке допомагає мережі моделювати складні залежності.",output:"Output — числовий сигнал, який нейрон передає далі або використовує як прогноз."},en:{inputs:"Inputs are the numerical values entering the neuron.",weights:"Weights are importance coefficients for each input. They are adjusted during training.",bias:"Bias is an additional parameter that shifts the neuron's response threshold.",sum:"The weighted sum combines all weighted inputs and bias.",activation:"Activation is a non-linear transformation that lets a network model complex relationships.",output:"Output is the numerical signal passed to later neurons or used as a prediction."}};const renderPart=p=>{box.textContent=copy[lang][p]};document.querySelectorAll(".neuron-part").forEach(b=>b.onclick=()=>{document.querySelectorAll(".neuron-part").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderPart(b.dataset.part)});renderPart("inputs")}
+function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();if(current===8)assessment();}}
 document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{lang=b.dataset.lang;localStorage.setItem("courseLang",lang);render()});
 $("startBtn").onclick=()=>{$("hero").classList.add("hidden");$("lesson").classList.remove("hidden");current=0;render()};
 $("nextBtn").onclick=()=>{if(current<9){current++;render();window.scrollTo({top:0,behavior:"smooth"})}};
