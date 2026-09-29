@@ -1,0 +1,11 @@
+const modules={
+uk:[["01","Вступ","Що таке Deep Learning і навіщо воно потрібне"],["02","AI → ML → Deep Learning","Як пов'язані ключові поняття"],["03","Штучний нейрон","Inputs → Weights → Activation → Output"],["04","Архітектура мережі","Input → Hidden Layers → Output"],["05","Як навчається мережа","Prediction → Error → Update → Repeat"],["06","Застосування","Зображення, текст, аудіо та оборона"],["07","Інтерактивний сценарій","Застосуйте знання до ситуації"],["08","Knowledge Check","Коротка перевірка знань"],["09","Final Assessment","Підсумкове оцінювання"],["10","Summary","Ключові висновки"]],
+en:[["01","Introduction","What Deep Learning is and why it matters"],["02","AI → ML → Deep Learning","How the key concepts relate"],["03","Artificial neuron","Inputs → Weights → Activation → Output"],["04","Network architecture","Input → Hidden Layers → Output"],["05","How a network learns","Prediction → Error → Update → Repeat"],["06","Applications","Images, text, audio and defence"],["07","Interactive scenario","Apply your knowledge to a situation"],["08","Knowledge Check","Short knowledge check"],["09","Final Assessment","Final assessment"],["10","Summary","Key takeaways"]]
+};
+let current=0;
+window.renderModules=function(){const lang=window.courseLang||"uk";document.getElementById("moduleGrid").innerHTML=modules[lang].map((m,i)=>`<article class="card"><div class="n">${m[0]}</div><h3>${m[1]}</h3><p>${m[2]}</p></article>`).join("")};
+document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>applyLanguage(b.dataset.lang));
+document.getElementById("startBtn").onclick=()=>{document.querySelector(".hero").classList.add("hidden");document.getElementById("modules").classList.remove("hidden");current=1;document.getElementById("progressBar").style.width="10%";renderModules()};
+document.getElementById("nextBtn").onclick=()=>{current=Math.min(10,current+1);document.getElementById("progressBar").style.width=(current*10)+"%"};
+document.getElementById("prevBtn").onclick=()=>{current=Math.max(1,current-1);document.getElementById("progressBar").style.width=(current*10)+"%"};
+applyLanguage(localStorage.getItem("courseLang")||"uk");
