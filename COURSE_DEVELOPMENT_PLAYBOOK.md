@@ -280,6 +280,20 @@ Assets:
 - `scenario-analyst.jpg`
 
 ### Section 8 — Knowledge Check
+Статус: **реалізовано, очікує перевірки GitHub Pages**.
+
+Виконано:
+- 5 завдань UA/EN;
+- multiple choice;
+- matching для Inputs / Weights / Bias;
+- перевірка послідовності навчання;
+- приклад застосування Speech;
+- підрахунок результату 0–5;
+- feedback по кожному завданню;
+- Try again / Спробувати ще раз.
+
+Наступна дія: QA живої сторінки.
+
 Потрібно:
 - 4–5 питань;
 - multiple choice;
