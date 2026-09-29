@@ -431,7 +431,20 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 </div>
 
 <div class="takeaway"><strong>Далі:</strong> після цієї самоперевірки переходьте до Final Assessment.</div>`},
-{title:"Final Assessment",lead:"Підсумкова перевірка",body:`<div id="assessment"></div>`},
+{title:"Final Assessment",lead:"Підсумкове оцінювання знань — 5 запитань, прохідний рівень 4/5",body:`
+<div class="assessment-intro">
+  <div>
+    <span class="assessment-badge">FINAL</span>
+    <h3>Підсумкова перевірка</h3>
+    <p>Оцініть, наскільки добре ви засвоїли ключові поняття модуля. Потрібно відповісти на всі 5 запитань.</p>
+  </div>
+  <div class="assessment-rules">
+    <div><b>5</b><span>запитань</span></div>
+    <div><b>4/5</b><span>прохідний рівень</span></div>
+    <div><b>80%</b><span>мінімальний результат</span></div>
+  </div>
+</div>
+<div id="assessment"></div>`},
 {title:"Summary",lead:"Підсумуємо головні ідеї курсу й зберемо їх у цілісну картину",body:`
 <div class="summary summary-enhanced">
   <div class="summary-complete">
@@ -904,7 +917,20 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 </div>
 
 <div class="takeaway"><strong>Next:</strong> after this self-check, continue to the Final Assessment.</div>`},
-{title:"Final Assessment",lead:"Final knowledge check",body:`<div id="assessment"></div>`},
+{title:"Final Assessment",lead:"Final knowledge assessment — 5 questions, passing score 4/5",body:`
+<div class="assessment-intro">
+  <div>
+    <span class="assessment-badge">FINAL</span>
+    <h3>Final knowledge check</h3>
+    <p>Assess how well you understand the key ideas from the module. All 5 questions must be answered.</p>
+  </div>
+  <div class="assessment-rules">
+    <div><b>5</b><span>questions</span></div>
+    <div><b>4/5</b><span>passing score</span></div>
+    <div><b>80%</b><span>minimum result</span></div>
+  </div>
+</div>
+<div id="assessment"></div>`},
 {title:"Summary",lead:"Bring the main ideas together into one coherent picture",body:`
 <div class="summary summary-enhanced">
   <div class="summary-complete">
@@ -948,10 +974,95 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 </div>`}
 ]}}
 ;
-const questions={uk:[["Deep Learning є…",["підмножиною Machine Learning","типом бази даних","операційною системою"],0],["Що змінюється під час навчання?",["Лише назва моделі","Ваги та інші параметри","Кількість вхідних даних автоматично"],1],["Для чого потрібна функція втрат?",["Вимірювати помилку прогнозу","Зберігати файли","Створювати нові класи"],0],["Що роблять hidden layers?",["Формують представлення ознак","Лише показують результат","Замінюють дані"],0],["Яка послідовність описує навчання?",["Прогноз → помилка → оновлення","Оновлення → видалення → прогноз","Зберігання → друк → прогноз"],0]],en:[["Deep Learning is…",["a subset of Machine Learning","a database type","an operating system"],0],["What changes during training?",["Only the model name","Weights and other parameters","The number of inputs automatically"],1],["What is a loss function used for?",["Measuring prediction error","Storing files","Creating new classes"],0],["What do hidden layers do?",["Build feature representations","Only display results","Replace the data"],0],["Which sequence describes training?",["Prediction → error → update","Update → delete → prediction","Storage → print → prediction"],0]]};
+const questions={
+uk:[
+  {q:"Яке твердження найточніше описує співвідношення AI, ML і Deep Learning?",a:["Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence","AI є підмножиною Deep Learning","Machine Learning і Deep Learning — повністю однакові поняття"],correct:0,why:"Deep Learning є частиною Machine Learning, а Machine Learning — частиною ширшої сфери Artificial Intelligence."},
+  {q:"Що відбувається всередині штучного нейрона?",a:["Входи множаться на ваги, додається bias, після чого застосовується activation","Нейрон лише зберігає вхідні дані","Нейрон автоматично додає нові навчальні приклади"],correct:0,why:"Базовий нейрон формує зважену суму входів, додає bias і пропускає результат через функцію активації."},
+  {q:"Чому hidden layers важливі у глибокій нейронній мережі?",a:["Вони поступово формують складніші представлення даних","Вони лише показують фінальний результат","Вони замінюють необхідність у навчальних даних"],correct:0,why:"Приховані шари комбінують прості ознаки в дедалі складніші представлення."},
+  {q:"Яка послідовність правильно описує основний цикл навчання?",a:["Forward pass → Loss → Backpropagation → Update","Loss → Delete data → Forward pass","Update → Storage → Output"],correct:0,why:"Спочатку мережа робить прогноз, потім вимірюється loss, обчислюються градієнти і оновлюються параметри."},
+  {q:"Аналітична група використовує модель для класифікації великої кількості зображень. Яка практика є найправильнішою?",a:["Оцінювати модель на відповідних даних і перевіряти сумнівні результати","Автоматично вважати кожен прогноз правильним","Не використовувати метрики, якщо модель уже навчена"],correct:0,why:"Навіть після навчання модель потребує оцінювання, контролю якості та людської перевірки у відповідних випадках."}
+],
+en:[
+  {q:"Which statement best describes the relationship between AI, ML, and Deep Learning?",a:["Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence","AI is a subset of Deep Learning","Machine Learning and Deep Learning are exactly the same"],correct:0,why:"Deep Learning is part of Machine Learning, which is itself part of the broader field of Artificial Intelligence."},
+  {q:"What happens inside an artificial neuron?",a:["Inputs are weighted, bias is added, and an activation function is applied","The neuron only stores input data","The neuron automatically creates new training examples"],correct:0,why:"A basic neuron forms a weighted sum of inputs, adds bias, and passes the result through an activation function."},
+  {q:"Why are hidden layers important in a deep neural network?",a:["They progressively build more complex representations of data","They only display the final output","They remove the need for training data"],correct:0,why:"Hidden layers combine simpler features into progressively richer representations."},
+  {q:"Which sequence correctly describes the basic training loop?",a:["Forward pass → Loss → Backpropagation → Update","Loss → Delete data → Forward pass","Update → Storage → Output"],correct:0,why:"The network predicts, loss is measured, gradients are calculated, and parameters are updated."},
+  {q:"An analytical team uses a model to classify a large image collection. Which practice is most appropriate?",a:["Evaluate the model on relevant data and review uncertain outputs","Automatically treat every prediction as correct","Stop using metrics once the model has been trained"],correct:0,why:"A trained model still requires evaluation, quality control, and human review where appropriate."}
+]
+};
 let lang=localStorage.getItem("courseLang")||"uk",current=0,score=0;
 const $=id=>document.getElementById(id);
-function assessment(){const box=$("assessment");if(!box)return;score=0;box.innerHTML=questions[lang].map((q,i)=>`<div class="assessment-q"><p><strong>${i+1}. ${q[0]}</strong></p>${q[1].map((a,j)=>`<button class="assessment-answer" data-q="${i}" data-a="${j}">${a}</button>`).join("")}</div>`).join("")+`<button id="submitAssessment" class="primary">${lang==="uk"?"Завершити оцінювання":"Submit assessment"}</button><div id="score"></div>`;document.querySelectorAll(".assessment-answer").forEach(b=>b.onclick=()=>{document.querySelectorAll(`.assessment-answer[data-q="${b.dataset.q}"]`).forEach(x=>x.classList.remove("selected"));b.classList.add("selected")});$("submitAssessment").onclick=()=>{score=0;questions[lang].forEach((q,i)=>{const s=document.querySelector(`.assessment-answer.selected[data-q="${i}"]`);if(s&&+s.dataset.a===q[2])score++});$("score").innerHTML=`<div class="scorebox"><strong>${score}/5 — ${score>=4?(lang==="uk"?"Успішно":"Passed"):(lang==="uk"?"Перегляньте матеріал і спробуйте ще раз":"Review the material and try again")}</strong></div>`}}
+function assessment(){
+  const box=$("assessment");if(!box)return;
+  score=0;
+  const qs=questions[lang];
+  box.innerHTML=
+    '<div class="assessment-progress"><span>'+ (lang==="uk"?"Відповіді":"Answered") +': <b id="assessmentAnswered">0/5</b></span><span>'+ (lang==="uk"?"Потрібно для успіху: 4/5":"Pass mark: 4/5") +'</span></div>'+
+    qs.map((q,i)=>`<article class="assessment-q" data-assessment-q="${i}">
+      <div class="assessment-q-head"><span>${i+1}</span><p><strong>${q.q}</strong></p></div>
+      <div class="assessment-options">${q.a.map((a,j)=>`<button class="assessment-answer" data-q="${i}" data-a="${j}">${a}</button>`).join("")}</div>
+      <p class="assessment-feedback"></p>
+    </article>`).join("")+
+    `<div class="assessment-actions">
+      <button id="submitAssessment" class="primary">${lang==="uk"?"Завершити оцінювання":"Submit assessment"}</button>
+      <button id="retryAssessment" class="secondary" hidden>${lang==="uk"?"Спробувати ще раз":"Try again"}</button>
+    </div>
+    <div id="score" aria-live="polite"></div>`;
+
+  const answered=()=>document.querySelectorAll(".assessment-answer.selected").length;
+  const updateCounter=()=>{const n=answered();const el=$("assessmentAnswered");if(el)el.textContent=n+"/5"};
+
+  document.querySelectorAll(".assessment-answer").forEach(b=>b.onclick=()=>{
+    const card=b.closest(".assessment-q");
+    card.querySelectorAll(".assessment-answer").forEach(x=>x.classList.remove("selected"));
+    b.classList.add("selected");
+    updateCounter();
+  });
+
+  $("submitAssessment").onclick=()=>{
+    const selected=document.querySelectorAll(".assessment-answer.selected");
+    if(selected.length<qs.length){
+      $("score").innerHTML=`<div class="scorebox warning"><strong>${lang==="uk"?"Будь ласка, дайте відповідь на всі 5 запитань.":"Please answer all 5 questions before submitting."}</strong></div>`;
+      return;
+    }
+    score=0;
+    qs.forEach((q,i)=>{
+      const card=document.querySelector(`.assessment-q[data-assessment-q="${i}"]`);
+      const s=card.querySelector(".assessment-answer.selected");
+      const ok=+s.dataset.a===q.correct;
+      if(ok)score++;
+      card.querySelectorAll(".assessment-answer").forEach(x=>{
+        x.disabled=true;
+        x.classList.remove("correct","wrong");
+        if(+x.dataset.a===q.correct)x.classList.add("correct");
+      });
+      if(!ok)s.classList.add("wrong");
+      const fb=card.querySelector(".assessment-feedback");
+      fb.textContent=(ok?(lang==="uk"?"Правильно. ":"Correct. "):(lang==="uk"?"Неправильно. ":"Incorrect. "))+q.why;
+      fb.className="assessment-feedback "+(ok?"ok":"retry");
+    });
+    const passed=score>=4;
+    const pct=score*20;
+    $("score").innerHTML=`<div class="scorebox ${passed?"passed":"failed"}">
+      <div class="score-main"><strong>${score}/5 · ${pct}%</strong><span>${passed?(lang==="uk"?"Успішно":"Passed"):(lang==="uk"?"Потрібне повторення":"Review required")}</span></div>
+      <p>${passed?(lang==="uk"?"Ви досягли прохідного рівня. Можна переходити до Summary.":"You reached the passing score. Continue to the Summary."):(lang==="uk"?"Перегляньте відповідні розділи та спробуйте оцінювання ще раз.":"Review the relevant sections and try the assessment again.")}</p>
+    </div>`;
+    $("submitAssessment").disabled=true;
+    $("retryAssessment").hidden=false;
+    localStorage.setItem("finalAssessmentScore",String(score));
+    localStorage.setItem("finalAssessmentPassed",passed?"1":"0");
+  };
+
+  $("retryAssessment").onclick=()=>{
+    score=0;
+    document.querySelectorAll(".assessment-answer").forEach(x=>{x.disabled=false;x.classList.remove("selected","correct","wrong")});
+    document.querySelectorAll(".assessment-feedback").forEach(x=>{x.textContent="";x.className="assessment-feedback"});
+    $("score").innerHTML="";
+    $("submitAssessment").disabled=false;
+    $("retryAssessment").hidden=true;
+    updateCounter();
+  };
+}
 function bindAnswers(){document.querySelectorAll(".answer").forEach(btn=>btn.onclick=()=>{const ok=btn.dataset.correct==="1",f=btn.parentElement.querySelector(".feedback");f.textContent=ok?(lang==="uk"?"Правильно.":"Correct."):(lang==="uk"?"Не зовсім. Спробуйте ще раз.":"Not quite. Try again.");f.className=`feedback ${ok?"ok":"retry"}`})}
 function bindNeuronParts(){const box=document.getElementById("neuronExplain");if(!box)return;const copy={uk:{inputs:"Inputs — числові значення, які надходять у нейрон.",weights:"Weights — коефіцієнти важливості кожного входу. Саме вони змінюються під час навчання.",bias:"Bias — додатковий параметр, що зміщує поріг реакції нейрона.",sum:"Weighted sum — сума всіх входів після множення на їхні ваги плюс bias.",activation:"Activation — нелінійне перетворення, яке допомагає мережі моделювати складні залежності.",output:"Output — числовий сигнал, який нейрон передає далі або використовує як прогноз."},en:{inputs:"Inputs are the numerical values entering the neuron.",weights:"Weights are importance coefficients for each input. They are adjusted during training.",bias:"Bias is an additional parameter that shifts the neuron's response threshold.",sum:"The weighted sum combines all weighted inputs and bias.",activation:"Activation is a non-linear transformation that lets a network model complex relationships.",output:"Output is the numerical signal passed to later neurons or used as a prediction."}};const renderPart=p=>{box.textContent=copy[lang][p]};document.querySelectorAll(".neuron-part").forEach(b=>b.onclick=()=>{document.querySelectorAll(".neuron-part").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderPart(b.dataset.part)});renderPart("inputs")}
 function bindLayerTabs(){const box=document.getElementById("layerExplain");if(!box)return;const copy={uk:{input:"Input layer отримує початкові числові дані й передає їх далі у мережу.",hidden:"Hidden layers виконують послідовні перетворення й формують дедалі складніші представлення.",output:"Output layer перетворює фінальне представлення на прогноз, клас, значення або інший результат."},en:{input:"The input layer receives initial numerical data and passes it into the network.",hidden:"Hidden layers perform successive transformations and build increasingly complex representations.",output:"The output layer converts the final representation into a prediction, class, value, or other result."}};const show=k=>{box.textContent=copy[lang][k]};document.querySelectorAll(".layer-tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".layer-tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");show(b.dataset.layer)});show("input")}
