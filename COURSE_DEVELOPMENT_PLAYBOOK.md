@@ -180,7 +180,19 @@ Assets:
 - `activation-output.svg`
 
 ### Section 4 — Neural Network Architecture
-Потрібно:
+Статус: **реалізовано, очікує перевірки GitHub Pages**.
+
+Виконано:
+- розширений UA/EN контент;
+- окрема схема input / hidden / output layers;
+- окрема схема feature hierarchy;
+- реалістичний контекст аналізу візуальних даних;
+- інтерактивне перемикання шарів;
+- mini-check.
+
+Наступна дія: QA живої сторінки.
+
+Початковий план:
 1. input / hidden / output layers;
 2. пояснити, чому «deep»;
 3. показати багатошарову мережу;
