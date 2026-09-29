@@ -55,3 +55,11 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;background-ima
 .neuron-explain{min-height:74px;padding:18px 20px;margin-bottom:28px;border:1px solid var(--line);border-radius:14px;background:rgba(16,42,70,.72);color:var(--muted);line-height:1.6}
 .neuron-explain:before{content:"↳ ";color:var(--accent);font-weight:700}
 @media(max-width:650px){.neuron-parts{display:grid;grid-template-columns:1fr 1fr}.neuron-part{border-radius:10px;text-align:left}}
+
+/* Section 4: Neural Network Architecture */
+.layer-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 14px}
+.layer-tab{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:11px 16px;border-radius:999px;cursor:pointer;transition:.2s}
+.layer-tab:hover,.layer-tab.active{border-color:var(--accent);background:rgba(111,199,255,.12);color:var(--accent)}
+.layer-explain{min-height:74px;padding:18px 20px;margin-bottom:28px;border:1px solid var(--line);border-radius:14px;background:rgba(16,42,70,.72);color:var(--muted);line-height:1.6}
+.layer-explain:before{content:"↳ ";color:var(--accent);font-weight:700}
+@media(max-width:650px){.layer-tabs{display:grid;grid-template-columns:1fr}.layer-tab{border-radius:10px;text-align:left}}
