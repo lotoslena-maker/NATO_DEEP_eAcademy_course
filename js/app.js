@@ -295,7 +295,61 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 <div class="takeaway"><strong>Важливо:</strong> якісний результат залежить не тільки від моделі, а й від даних, метрик, обчислювальних ресурсів і людського контролю.</div>
 <div class="check"><h3>Міні-перевірка</h3><p><strong>Який тип вхідних даних найбільш природний для Speech-моделі?</strong></p><button class="answer" data-correct="0">Координати таблиці</button><button class="answer" data-correct="1">Аудіосигнал</button><button class="answer" data-correct="0">Лише назва файлу</button><p class="feedback"></p></div>
 <div class="takeaway"><strong>Далі:</strong> у наступному розділі застосуємо ці ідеї в інтерактивному сценарії та оберемо підхід для конкретної задачі.</div>`},
-{title:"Інтерактивний сценарій",lead:"Оберіть підхід для задачі",body:`<div class="scenario"><p><strong>Ситуація:</strong> потрібно автоматично розподілити велику колекцію зображень за відомими категоріями. Даних достатньо, а ознаки складно описати вручну.</p><p>Який підхід найбільш доречний у межах цього навчального прикладу?</p><button class="answer" data-correct="0">Створити вручну правило для кожного можливого зображення</button><button class="answer" data-correct="1">Навчити модель розпізнавати закономірності на прикладах</button><button class="answer" data-correct="0">Не використовувати дані для навчання</button><p class="feedback"></p></div>`},
+{title:"Інтерактивний сценарій",lead:"Від задачі до вибору підходу: дані → модель → перевірка результату",body:`
+<div class="learning">
+  <strong>Після цього розділу ви зможете</strong>
+  <ul>
+    <li>визначити, коли Deep Learning є доречним підходом;</li>
+    <li>пов’язати тип даних із задачею моделі;</li>
+    <li>обґрунтувати роль людини у перевірці результату.</li>
+  </ul>
+</div>
+
+<h3>Ситуація</h3>
+<p>Аналітичній групі потрібно автоматично розподіляти велику колекцію аерознімків за відомими категоріями. Даних достатньо, а корисні ознаки складно описати набором простих ручних правил.</p>
+
+<div class="scenario-assets">
+  <figure><img src="assets/images/section7/scenario-aerial.jpg" alt="Аерознімок як приклад візуальних даних"><figcaption>Вхідні дані: велика колекція зображень.</figcaption></figure>
+  <figure><img src="assets/images/section7/scenario-map.svg" alt="Ілюстративна карта для геопросторового контексту"><figcaption>Контекст: місце та середовище можуть бути додатковими ознаками.</figcaption></figure>
+  <figure><img src="assets/images/section7/scenario-analyst.jpg" alt="Аналітикиня перевіряє результати моделі"><figcaption>Human-in-the-loop: людина перевіряє та інтерпретує результат.</figcaption></figure>
+</div>
+
+<h3>Крок 1. Який підхід обрати?</h3>
+<div class="scenario-step">
+  <button class="scenario-choice" data-scenario="approach" data-value="rules">Створити вручну правило для кожного можливого зображення</button>
+  <button class="scenario-choice" data-scenario="approach" data-value="learn">Навчити модель знаходити закономірності на прикладах</button>
+  <button class="scenario-choice" data-scenario="approach" data-value="ignore">Не використовувати дані для навчання</button>
+  <div class="scenario-feedback" id="scenarioApproachFeedback"></div>
+</div>
+
+<h3>Крок 2. Який тип задачі це найбільше нагадує?</h3>
+<div class="scenario-step">
+  <button class="scenario-choice" data-scenario="task" data-value="classification">Класифікація зображень</button>
+  <button class="scenario-choice" data-scenario="task" data-value="speech">Розпізнавання мовлення</button>
+  <button class="scenario-choice" data-scenario="task" data-value="database">Зберігання файлів</button>
+  <div class="scenario-feedback" id="scenarioTaskFeedback"></div>
+</div>
+
+<h3>Крок 3. Що робити з результатом моделі?</h3>
+<div class="scenario-step">
+  <button class="scenario-choice" data-scenario="oversight" data-value="accept">Автоматично приймати будь-який прогноз як правильний</button>
+  <button class="scenario-choice" data-scenario="oversight" data-value="review">Перевіряти результати, особливо сумнівні випадки</button>
+  <button class="scenario-choice" data-scenario="oversight" data-value="hide">Не показувати людині метрики й помилки</button>
+  <div class="scenario-feedback" id="scenarioOversightFeedback"></div>
+</div>
+
+<div class="takeaway"><strong>Правильна логіка:</strong> складні візуальні дані + достатня кількість прикладів → навчання моделі → оцінювання → людська перевірка результатів.</div>
+
+<div class="check">
+  <h3>Міні-перевірка</h3>
+  <p><strong>Чому в цій ситуації Deep Learning може бути доречним?</strong></p>
+  <button class="answer" data-correct="0">Бо мережа не потребує даних</button>
+  <button class="answer" data-correct="1">Бо ознаки складно описати вручну, а прикладів для навчання достатньо</button>
+  <button class="answer" data-correct="0">Бо будь-яка задача завжди потребує Deep Learning</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Далі:</strong> у Knowledge Check перевіримо ключові поняття всього модуля.</div>`},
 {title:"Knowledge Check",lead:"Перевірте ключові поняття",body:`<div class="check"><h3>Що є підмножиною Machine Learning?</h3><button class="answer" data-correct="1">Deep Learning</button><button class="answer" data-correct="0">Усі бази даних</button><button class="answer" data-correct="0">Будь-яка комп’ютерна програма</button><p class="feedback"></p></div><div class="takeaway">Після відповіді переходьте до підсумкового оцінювання.</div>`},
 {title:"Final Assessment",lead:"Підсумкова перевірка",body:`<div id="assessment"></div>`},
 {title:"Summary",lead:"Підсумуємо головні ідеї курсу й зберемо їх у цілісну картину",body:`
@@ -634,7 +688,61 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 <div class="takeaway"><strong>Important:</strong> high-quality outcomes depend not only on the model, but also on data, metrics, computing resources, and human oversight.</div>
 <div class="check"><h3>Mini check</h3><p><strong>Which input type is most natural for a Speech model?</strong></p><button class="answer" data-correct="0">Spreadsheet coordinates</button><button class="answer" data-correct="1">An audio signal</button><button class="answer" data-correct="0">Only the file name</button><p class="feedback"></p></div>
 <div class="takeaway"><strong>Next:</strong> in the next section, we will apply these ideas in an interactive scenario and choose an approach for a specific task.</div>`},
-{title:"Interactive Scenario",lead:"Choose an approach for the task",body:`<div class="scenario"><p><strong>Situation:</strong> a large image collection must be automatically assigned to known categories. There is sufficient training data and useful features are difficult to specify manually.</p><p>Which approach is most appropriate for this learning example?</p><button class="answer" data-correct="0">Write a manual rule for every possible image</button><button class="answer" data-correct="1">Train a model to learn patterns from examples</button><button class="answer" data-correct="0">Do not use data for learning</button><p class="feedback"></p></div>`},
+{title:"Interactive Scenario",lead:"From problem to approach: data → model → result review",body:`
+<div class="learning">
+  <strong>After this section, you will be able to</strong>
+  <ul>
+    <li>identify when Deep Learning may be an appropriate approach;</li>
+    <li>connect the data type with the model task;</li>
+    <li>justify the role of human review.</li>
+  </ul>
+</div>
+
+<h3>Situation</h3>
+<p>An analytical team needs to automatically assign a large collection of aerial images to known categories. There is enough training data, while useful features are difficult to express as a small set of hand-written rules.</p>
+
+<div class="scenario-assets">
+  <figure><img src="assets/images/section7/scenario-aerial.jpg" alt="Aerial image as an example of visual input data"><figcaption>Input: a large collection of images.</figcaption></figure>
+  <figure><img src="assets/images/section7/scenario-map.svg" alt="Illustrative map providing geospatial context"><figcaption>Context: location and environment may provide additional features.</figcaption></figure>
+  <figure><img src="assets/images/section7/scenario-analyst.jpg" alt="Analyst reviewing model outputs"><figcaption>Human-in-the-loop: a person reviews and interprets model results.</figcaption></figure>
+</div>
+
+<h3>Step 1. Which approach should you choose?</h3>
+<div class="scenario-step">
+  <button class="scenario-choice" data-scenario="approach" data-value="rules">Write a manual rule for every possible image</button>
+  <button class="scenario-choice" data-scenario="approach" data-value="learn">Train a model to learn patterns from examples</button>
+  <button class="scenario-choice" data-scenario="approach" data-value="ignore">Do not use data for training</button>
+  <div class="scenario-feedback" id="scenarioApproachFeedback"></div>
+</div>
+
+<h3>Step 2. Which task type does this most closely resemble?</h3>
+<div class="scenario-step">
+  <button class="scenario-choice" data-scenario="task" data-value="classification">Image classification</button>
+  <button class="scenario-choice" data-scenario="task" data-value="speech">Speech recognition</button>
+  <button class="scenario-choice" data-scenario="task" data-value="database">File storage</button>
+  <div class="scenario-feedback" id="scenarioTaskFeedback"></div>
+</div>
+
+<h3>Step 3. What should happen with model outputs?</h3>
+<div class="scenario-step">
+  <button class="scenario-choice" data-scenario="oversight" data-value="accept">Automatically accept every prediction as correct</button>
+  <button class="scenario-choice" data-scenario="oversight" data-value="review">Review results, especially uncertain cases</button>
+  <button class="scenario-choice" data-scenario="oversight" data-value="hide">Hide metrics and errors from the human reviewer</button>
+  <div class="scenario-feedback" id="scenarioOversightFeedback"></div>
+</div>
+
+<div class="takeaway"><strong>Correct logic:</strong> complex visual data + sufficient examples → model training → evaluation → human review of results.</div>
+
+<div class="check">
+  <h3>Mini check</h3>
+  <p><strong>Why can Deep Learning be appropriate in this situation?</strong></p>
+  <button class="answer" data-correct="0">Because the network does not need data</button>
+  <button class="answer" data-correct="1">Because useful features are difficult to hand-code and sufficient training examples are available</button>
+  <button class="answer" data-correct="0">Because every task always needs Deep Learning</button>
+  <p class="feedback"></p>
+</div>
+
+<div class="takeaway"><strong>Next:</strong> the Knowledge Check will review the key ideas from the whole module.</div>`},
 {title:"Knowledge Check",lead:"Check the key concepts",body:`<div class="check"><h3>Which is a subset of Machine Learning?</h3><button class="answer" data-correct="1">Deep Learning</button><button class="answer" data-correct="0">All databases</button><button class="answer" data-correct="0">Any computer program</button><p class="feedback"></p></div><div class="takeaway">After answering, continue to the final assessment.</div>`},
 {title:"Final Assessment",lead:"Final knowledge check",body:`<div id="assessment"></div>`},
 {title:"Summary",lead:"Bring the main ideas together into one coherent picture",body:`
@@ -689,7 +797,8 @@ function bindNeuronParts(){const box=document.getElementById("neuronExplain");if
 function bindLayerTabs(){const box=document.getElementById("layerExplain");if(!box)return;const copy={uk:{input:"Input layer отримує початкові числові дані й передає їх далі у мережу.",hidden:"Hidden layers виконують послідовні перетворення й формують дедалі складніші представлення.",output:"Output layer перетворює фінальне представлення на прогноз, клас, значення або інший результат."},en:{input:"The input layer receives initial numerical data and passes it into the network.",hidden:"Hidden layers perform successive transformations and build increasingly complex representations.",output:"The output layer converts the final representation into a prediction, class, value, or other result."}};const show=k=>{box.textContent=copy[lang][k]};document.querySelectorAll(".layer-tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".layer-tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");show(b.dataset.layer)});show("input")}
 function bindTrainingTabs(){const box=document.getElementById("trainingExplain");if(!box)return;const copy={uk:{data:"Data — приклади, на яких мережа навчається.",forward:"Forward pass — дані проходять через мережу, яка формує прогноз.",loss:"Loss — числова оцінка того, наскільки прогноз відрізняється від правильної відповіді.",backprop:"Backpropagation — обчислення внеску параметрів мережі у помилку.",update:"Update — оптимізатор коригує ваги невеликими кроками."},en:{data:"Data are the examples used to train the network.",forward:"Forward pass moves data through the network to produce a prediction.",loss:"Loss is a numerical measure of how far the prediction is from the correct answer.",backprop:"Backpropagation calculates how network parameters contributed to the error.",update:"Update means the optimizer adjusts the weights in small steps."}};const show=k=>{box.textContent=copy[lang][k]};document.querySelectorAll(".training-tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".training-tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");show(b.dataset.step)});show("data")}
 function bindSummaryActions(){document.querySelectorAll("[data-review-course]").forEach(b=>b.onclick=()=>{current=0;render();window.scrollTo({top:0,behavior:"smooth"})})}
-function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();bindLayerTabs();bindTrainingTabs();bindSummaryActions();if(current===8)assessment();}}
+function bindScenarioChoices(){const copy={uk:{approach:{learn:["ok","Так. Коли ознаки складно описати вручну, а прикладів достатньо, навчання моделі є логічним вибором."],rules:["retry","Ручні правила можуть бути надто крихкими для великої різноманітності зображень."],ignore:["retry","Без навчальних прикладів модель не зможе вивчити потрібні закономірності."]},task:{classification:["ok","Так. Потрібно віднести кожне зображення до відомої категорії — це класифікація."],speech:["retry","Speech працює з аудіоданими, а тут основний вхід — зображення."],database:["retry","Зберігання файлів — це інфраструктурна задача, а не задача розпізнавання."]},oversight:{review:["ok","Так. Людина має перевіряти результати, особливо невпевнені або критичні випадки."],accept:["retry","Автоматичне прийняття будь-якого прогнозу ігнорує можливі помилки моделі."],hide:["retry","Без метрик і помилок складніше оцінити надійність моделі."]}},en:{approach:{learn:["ok","Correct. When features are hard to hand-code and enough examples exist, learning from data is a sensible approach."],rules:["retry","Hand-written rules may be too brittle for a wide variety of images."],ignore:["retry","Without training examples, the model cannot learn the required patterns."]},task:{classification:["ok","Correct. Assigning each image to a known category is a classification task."],speech:["retry","Speech systems use audio data, while the primary input here is imagery."],database:["retry","File storage is an infrastructure task, not a recognition task."]},oversight:{review:["ok","Correct. Human review is important, especially for uncertain or consequential cases."],accept:["retry","Automatically accepting every prediction ignores the possibility of model error."],hide:["retry","Without metrics and error information, reliability is harder to assess."]}}};document.querySelectorAll(".scenario-choice").forEach(b=>b.onclick=()=>{const group=b.dataset.scenario,val=b.dataset.value;document.querySelectorAll('.scenario-choice[data-scenario="'+group+'"]').forEach(x=>x.classList.remove("selected","correct","wrong"));b.classList.add("selected");const [state,msg]=copy[lang][group][val];b.classList.add(state==="ok"?"correct":"wrong");const ids={approach:"scenarioApproachFeedback",task:"scenarioTaskFeedback",oversight:"scenarioOversightFeedback"};const box=document.getElementById(ids[group]);if(box){box.textContent=msg;box.className="scenario-feedback "+state}})}
+function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();bindLayerTabs();bindTrainingTabs();bindScenarioChoices();bindSummaryActions();if(current===8)assessment();}}
 document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{lang=b.dataset.lang;localStorage.setItem("courseLang",lang);render()});
 $("startBtn").onclick=()=>{$("hero").classList.add("hidden");$("lesson").classList.remove("hidden");current=0;render()};
 $("nextBtn").onclick=()=>{if(current<9){current++;render();window.scrollTo({top:0,behavior:"smooth"})}};
