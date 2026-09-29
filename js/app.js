@@ -350,7 +350,87 @@ uk:{start:"Розпочати курс",prev:"Назад",next:"Далі",sectio
 </div>
 
 <div class="takeaway"><strong>Далі:</strong> у Knowledge Check перевіримо ключові поняття всього модуля.</div>`},
-{title:"Knowledge Check",lead:"Перевірте ключові поняття",body:`<div class="check"><h3>Що є підмножиною Machine Learning?</h3><button class="answer" data-correct="1">Deep Learning</button><button class="answer" data-correct="0">Усі бази даних</button><button class="answer" data-correct="0">Будь-яка комп’ютерна програма</button><p class="feedback"></p></div><div class="takeaway">Після відповіді переходьте до підсумкового оцінювання.</div>`},
+{title:"Knowledge Check",lead:"Перевірте ключові поняття перед підсумковим оцінюванням",body:`
+<div class="learning">
+  <strong>Мета перевірки</strong>
+  <p>П’ять коротких завдань охоплюють ключові поняття модуля: AI/ML/DL, штучний нейрон, шари мережі, навчання та застосування.</p>
+</div>
+
+<div class="knowledge-check" id="knowledgeCheck">
+  <article class="kc-card" data-kc-q="q1">
+    <span class="kc-number">1</span>
+    <h3>Що є підмножиною Machine Learning?</h3>
+    <button class="kc-option" data-value="a">Deep Learning</button>
+    <button class="kc-option" data-value="b">Усі бази даних</button>
+    <button class="kc-option" data-value="c">Будь-яка комп’ютерна програма</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card" data-kc-q="q2">
+    <span class="kc-number">2</span>
+    <h3>Що визначає силу впливу окремого входу на нейрон?</h3>
+    <button class="kc-option" data-value="a">Назва змінної</button>
+    <button class="kc-option" data-value="b">Вага входу</button>
+    <button class="kc-option" data-value="c">Кількість шарів у мережі</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card kc-match" data-kc-q="q3">
+    <span class="kc-number">3</span>
+    <h3>Зіставте поняття з його роллю</h3>
+    <label>Inputs
+      <select data-match="inputs">
+        <option value="">Оберіть...</option>
+        <option value="numbers">Числові значення, що надходять у нейрон</option>
+        <option value="importance">Коефіцієнти важливості входів</option>
+        <option value="shift">Додаткове зміщення</option>
+      </select>
+    </label>
+    <label>Weights
+      <select data-match="weights">
+        <option value="">Оберіть...</option>
+        <option value="numbers">Числові значення, що надходять у нейрон</option>
+        <option value="importance">Коефіцієнти важливості входів</option>
+        <option value="shift">Додаткове зміщення</option>
+      </select>
+    </label>
+    <label>Bias
+      <select data-match="bias">
+        <option value="">Оберіть...</option>
+        <option value="numbers">Числові значення, що надходять у нейрон</option>
+        <option value="importance">Коефіцієнти важливості входів</option>
+        <option value="shift">Додаткове зміщення</option>
+      </select>
+    </label>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card" data-kc-q="q4">
+    <span class="kc-number">4</span>
+    <h3>Яка послідовність правильно описує навчання мережі?</h3>
+    <button class="kc-option" data-value="a">Forward pass → Loss → Backpropagation → Update</button>
+    <button class="kc-option" data-value="b">Update → Delete data → Prediction</button>
+    <button class="kc-option" data-value="c">Loss → Input → Storage → Output</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card" data-kc-q="q5">
+    <span class="kc-number">5</span>
+    <h3>Які дані є природним входом для Speech-моделі?</h3>
+    <button class="kc-option" data-value="a">Аудіосигнал</button>
+    <button class="kc-option" data-value="b">Лише ім’я файлу</button>
+    <button class="kc-option" data-value="c">Координати комірок таблиці</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <div class="kc-actions">
+    <button class="primary" data-kc-submit>Перевірити відповіді</button>
+    <button class="secondary" data-kc-retry hidden>Спробувати ще раз</button>
+  </div>
+  <div class="kc-result" id="kcResult" aria-live="polite"></div>
+</div>
+
+<div class="takeaway"><strong>Далі:</strong> після цієї самоперевірки переходьте до Final Assessment.</div>`},
 {title:"Final Assessment",lead:"Підсумкова перевірка",body:`<div id="assessment"></div>`},
 {title:"Summary",lead:"Підсумуємо головні ідеї курсу й зберемо їх у цілісну картину",body:`
 <div class="summary summary-enhanced">
@@ -743,7 +823,87 @@ en:{start:"Start course",prev:"Back",next:"Next",sections:[
 </div>
 
 <div class="takeaway"><strong>Next:</strong> the Knowledge Check will review the key ideas from the whole module.</div>`},
-{title:"Knowledge Check",lead:"Check the key concepts",body:`<div class="check"><h3>Which is a subset of Machine Learning?</h3><button class="answer" data-correct="1">Deep Learning</button><button class="answer" data-correct="0">All databases</button><button class="answer" data-correct="0">Any computer program</button><p class="feedback"></p></div><div class="takeaway">After answering, continue to the final assessment.</div>`},
+{title:"Knowledge Check",lead:"Review the key concepts before the final assessment",body:`
+<div class="learning">
+  <strong>Check objective</strong>
+  <p>Five short activities cover the main ideas from the module: AI/ML/DL, the artificial neuron, network layers, training, and applications.</p>
+</div>
+
+<div class="knowledge-check" id="knowledgeCheck">
+  <article class="kc-card" data-kc-q="q1">
+    <span class="kc-number">1</span>
+    <h3>Which is a subset of Machine Learning?</h3>
+    <button class="kc-option" data-value="a">Deep Learning</button>
+    <button class="kc-option" data-value="b">All databases</button>
+    <button class="kc-option" data-value="c">Any computer program</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card" data-kc-q="q2">
+    <span class="kc-number">2</span>
+    <h3>What determines how strongly an individual input influences a neuron?</h3>
+    <button class="kc-option" data-value="a">The variable name</button>
+    <button class="kc-option" data-value="b">The input weight</button>
+    <button class="kc-option" data-value="c">The number of network layers</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card kc-match" data-kc-q="q3">
+    <span class="kc-number">3</span>
+    <h3>Match each concept to its role</h3>
+    <label>Inputs
+      <select data-match="inputs">
+        <option value="">Choose...</option>
+        <option value="numbers">Numerical values entering the neuron</option>
+        <option value="importance">Importance coefficients for inputs</option>
+        <option value="shift">An additional shift</option>
+      </select>
+    </label>
+    <label>Weights
+      <select data-match="weights">
+        <option value="">Choose...</option>
+        <option value="numbers">Numerical values entering the neuron</option>
+        <option value="importance">Importance coefficients for inputs</option>
+        <option value="shift">An additional shift</option>
+      </select>
+    </label>
+    <label>Bias
+      <select data-match="bias">
+        <option value="">Choose...</option>
+        <option value="numbers">Numerical values entering the neuron</option>
+        <option value="importance">Importance coefficients for inputs</option>
+        <option value="shift">An additional shift</option>
+      </select>
+    </label>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card" data-kc-q="q4">
+    <span class="kc-number">4</span>
+    <h3>Which sequence correctly describes network training?</h3>
+    <button class="kc-option" data-value="a">Forward pass → Loss → Backpropagation → Update</button>
+    <button class="kc-option" data-value="b">Update → Delete data → Prediction</button>
+    <button class="kc-option" data-value="c">Loss → Input → Storage → Output</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <article class="kc-card" data-kc-q="q5">
+    <span class="kc-number">5</span>
+    <h3>Which data type is a natural input for a Speech model?</h3>
+    <button class="kc-option" data-value="a">An audio signal</button>
+    <button class="kc-option" data-value="b">Only a file name</button>
+    <button class="kc-option" data-value="c">Spreadsheet cell coordinates</button>
+    <p class="kc-feedback"></p>
+  </article>
+
+  <div class="kc-actions">
+    <button class="primary" data-kc-submit>Check answers</button>
+    <button class="secondary" data-kc-retry hidden>Try again</button>
+  </div>
+  <div class="kc-result" id="kcResult" aria-live="polite"></div>
+</div>
+
+<div class="takeaway"><strong>Next:</strong> after this self-check, continue to the Final Assessment.</div>`},
 {title:"Final Assessment",lead:"Final knowledge check",body:`<div id="assessment"></div>`},
 {title:"Summary",lead:"Bring the main ideas together into one coherent picture",body:`
 <div class="summary summary-enhanced">
@@ -798,7 +958,8 @@ function bindLayerTabs(){const box=document.getElementById("layerExplain");if(!b
 function bindTrainingTabs(){const box=document.getElementById("trainingExplain");if(!box)return;const copy={uk:{data:"Data — приклади, на яких мережа навчається.",forward:"Forward pass — дані проходять через мережу, яка формує прогноз.",loss:"Loss — числова оцінка того, наскільки прогноз відрізняється від правильної відповіді.",backprop:"Backpropagation — обчислення внеску параметрів мережі у помилку.",update:"Update — оптимізатор коригує ваги невеликими кроками."},en:{data:"Data are the examples used to train the network.",forward:"Forward pass moves data through the network to produce a prediction.",loss:"Loss is a numerical measure of how far the prediction is from the correct answer.",backprop:"Backpropagation calculates how network parameters contributed to the error.",update:"Update means the optimizer adjusts the weights in small steps."}};const show=k=>{box.textContent=copy[lang][k]};document.querySelectorAll(".training-tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".training-tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");show(b.dataset.step)});show("data")}
 function bindSummaryActions(){document.querySelectorAll("[data-review-course]").forEach(b=>b.onclick=()=>{current=0;render();window.scrollTo({top:0,behavior:"smooth"})})}
 function bindScenarioChoices(){const copy={uk:{approach:{learn:["ok","Так. Коли ознаки складно описати вручну, а прикладів достатньо, навчання моделі є логічним вибором."],rules:["retry","Ручні правила можуть бути надто крихкими для великої різноманітності зображень."],ignore:["retry","Без навчальних прикладів модель не зможе вивчити потрібні закономірності."]},task:{classification:["ok","Так. Потрібно віднести кожне зображення до відомої категорії — це класифікація."],speech:["retry","Speech працює з аудіоданими, а тут основний вхід — зображення."],database:["retry","Зберігання файлів — це інфраструктурна задача, а не задача розпізнавання."]},oversight:{review:["ok","Так. Людина має перевіряти результати, особливо невпевнені або критичні випадки."],accept:["retry","Автоматичне прийняття будь-якого прогнозу ігнорує можливі помилки моделі."],hide:["retry","Без метрик і помилок складніше оцінити надійність моделі."]}},en:{approach:{learn:["ok","Correct. When features are hard to hand-code and enough examples exist, learning from data is a sensible approach."],rules:["retry","Hand-written rules may be too brittle for a wide variety of images."],ignore:["retry","Without training examples, the model cannot learn the required patterns."]},task:{classification:["ok","Correct. Assigning each image to a known category is a classification task."],speech:["retry","Speech systems use audio data, while the primary input here is imagery."],database:["retry","File storage is an infrastructure task, not a recognition task."]},oversight:{review:["ok","Correct. Human review is important, especially for uncertain or consequential cases."],accept:["retry","Automatically accepting every prediction ignores the possibility of model error."],hide:["retry","Without metrics and error information, reliability is harder to assess."]}}};document.querySelectorAll(".scenario-choice").forEach(b=>b.onclick=()=>{const group=b.dataset.scenario,val=b.dataset.value;document.querySelectorAll('.scenario-choice[data-scenario="'+group+'"]').forEach(x=>x.classList.remove("selected","correct","wrong"));b.classList.add("selected");const [state,msg]=copy[lang][group][val];b.classList.add(state==="ok"?"correct":"wrong");const ids={approach:"scenarioApproachFeedback",task:"scenarioTaskFeedback",oversight:"scenarioOversightFeedback"};const box=document.getElementById(ids[group]);if(box){box.textContent=msg;box.className="scenario-feedback "+state}})}
-function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();bindLayerTabs();bindTrainingTabs();bindScenarioChoices();bindSummaryActions();if(current===8)assessment();}}
+function bindKnowledgeCheck(){const root=document.getElementById("knowledgeCheck");if(!root)return;const answers={q1:"a",q2:"b",q4:"a",q5:"a"};const feedback={uk:{ok:"Правильно.",wrong:"Потрібно переглянути це поняття ще раз.",matchOk:"Усі відповідності правильні.",matchWrong:"Перевірте відповідності Inputs, Weights і Bias.",result:(s)=>`Результат: ${s}/5. ${s===5?"Відмінно — усі ключові поняття засвоєні.":s>=4?"Добре — можна переходити до Final Assessment.":"Рекомендовано ще раз переглянути відповідні розділи перед Final Assessment."}`},en:{ok:"Correct.",wrong:"Review this concept once more.",matchOk:"All matches are correct.",matchWrong:"Check the Inputs, Weights, and Bias matches.",result:(s)=>`Result: ${s}/5. ${s===5?"Excellent — all key concepts are correct.":s>=4?"Good — you can continue to the Final Assessment.":"Review the relevant sections before continuing to the Final Assessment."}`}};root.querySelectorAll(".kc-card:not(.kc-match) .kc-option").forEach(b=>b.onclick=()=>{const card=b.closest(".kc-card");card.querySelectorAll(".kc-option").forEach(x=>x.classList.remove("selected"));b.classList.add("selected")});const submit=root.querySelector("[data-kc-submit]"),retry=root.querySelector("[data-kc-retry]");submit.onclick=()=>{let score=0;root.querySelectorAll(".kc-card:not(.kc-match)").forEach(card=>{const q=card.dataset.kcQ,selected=card.querySelector(".kc-option.selected"),fb=card.querySelector(".kc-feedback"),ok=selected&&selected.dataset.value===answers[q];card.querySelectorAll(".kc-option").forEach(x=>x.classList.remove("correct","wrong"));if(selected)selected.classList.add(ok?"correct":"wrong");fb.textContent=ok?feedback[lang].ok:feedback[lang].wrong;fb.className="kc-feedback "+(ok?"ok":"retry");if(ok)score++});const match=root.querySelector('.kc-card[data-kc-q="q3"]');const vals={inputs:match.querySelector('[data-match="inputs"]').value,weights:match.querySelector('[data-match="weights"]').value,bias:match.querySelector('[data-match="bias"]').value};const mok=vals.inputs==="numbers"&&vals.weights==="importance"&&vals.bias==="shift";const mfb=match.querySelector(".kc-feedback");mfb.textContent=mok?feedback[lang].matchOk:feedback[lang].matchWrong;mfb.className="kc-feedback "+(mok?"ok":"retry");if(mok)score++;const result=document.getElementById("kcResult");result.textContent=feedback[lang].result(score);result.className="kc-result "+(score>=4?"ok":"retry");retry.hidden=false;submit.disabled=true};retry.onclick=()=>{root.querySelectorAll(".kc-option").forEach(x=>x.classList.remove("selected","correct","wrong"));root.querySelectorAll("select").forEach(s=>s.value="");root.querySelectorAll(".kc-feedback").forEach(f=>{f.textContent="";f.className="kc-feedback"});const result=document.getElementById("kcResult");result.textContent="";result.className="kc-result";retry.hidden=true;submit.disabled=false}}
+function render(){const d=course[lang],s=d.sections[current];document.documentElement.lang=lang;$("heroTitle").textContent=lang==="uk"?"Основи глибокого навчання":"Fundamentals of Deep Learning";$("heroLead").textContent=lang==="uk"?"Від штучного нейрона до навчання нейронної мережі":"From an artificial neuron to neural-network learning";$("startBtn").textContent=d.start;$("prevLabel").textContent=d.prev;$("nextLabel").textContent=d.next;document.querySelectorAll("[data-lang]").forEach(x=>x.classList.toggle("active",x.dataset.lang===lang));if(!$("lesson").classList.contains("hidden")){$("sectionDots").innerHTML=Array.from({length:10},(_,i)=>`<i class="${i<=current?"done":""}"></i>`).join("");$("lessonNo").textContent=`${lang==="uk"?"РОЗДІЛ":"SECTION"} ${String(current+1).padStart(2,"0")} / 10`;$("lessonTitle").textContent=s.title;$("lessonLead").textContent=s.lead;$("lessonBody").innerHTML=s.body;$("progressBar").style.width=`${(current+1)*10}%`;bindAnswers();bindNeuronParts();bindLayerTabs();bindTrainingTabs();bindScenarioChoices();bindKnowledgeCheck();bindSummaryActions();if(current===8)assessment();}}
 document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{lang=b.dataset.lang;localStorage.setItem("courseLang",lang);render()});
 $("startBtn").onclick=()=>{$("hero").classList.add("hidden");$("lesson").classList.remove("hidden");current=0;render()};
 $("nextBtn").onclick=()=>{if(current<9){current++;render();window.scrollTo({top:0,behavior:"smooth"})}};
