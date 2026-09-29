@@ -257,6 +257,17 @@ Assets:
 - `signal-analysis.jpg`
 
 ### Section 7 — Interactive Scenario
+Статус: **реалізовано, очікує перевірки GitHub Pages**.
+
+Виконано:
+- розширений UA/EN сценарій;
+- 3 окремі visual assets: aerial photo, standalone map, analyst photo;
+- 3 кроки вибору з окремим feedback;
+- human-in-the-loop акцент;
+- mini-check.
+
+Наступна дія: QA живої сторінки.
+
 Потрібно:
 1. реальна навчальна ситуація;
 2. 2–3 рішення користувача;
